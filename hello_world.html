@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="100"- rows="20">
+        <button id ="OK">Testarea</button><br/>
+        <button id ="OK2">Test2</button> <br>
+        <span>OK</span>
+        <script>
+            document.getElementById('OK').addEventListener('click',e =>{
+                console.log("AREA");
+            });
+        
+            document.getElementById('OK2').addEventListener('click',e =>{
+                console.log("Work");
+            });
+        </script>
+    </textarea>
+    <button id="ok">OK</button>
+    <div class="" id="detail">Detail</div>
+    <div id="save"></div>
+    <script>
+        var x = document.getElementsByTagName('textarea')[0];
+        var v2 = document.getElementById('ok');
+        console.log(x);
+        x.addEventListener('keyup',e =>{
+            try {
+                const v = e.target.parentElement;
+                document.getElementById('save').innerHTML = e.target.value;
+                for (let x = 0; x < document.getElementById('save').children.length; x++) {
+                    const element = document.getElementById('save').children[x].tagName;
+                    const element2 =  document.getElementById('save').children[x].innerText;
+                        if(element == "SCRIPT") eval(element2);      
+                }
+            } catch (error) {}
+        });
+        window.addEventListener('load',e =>{
+            const v = e.target.parentElement;
+        document.getElementById('save').innerHTML = x.value;
+            for (let x = 0; x < document.getElementById('save').children.length; x++) {
+                const element = document.getElementById('save').children[x].tagName;
+                const element2 =  document.getElementById('save').children[x].innerText;
+                    if(element == "SCRIPT"){
+                            eval(element2);
+                    }
+            }
+        });     
+    </script>
+</body>
+</html>
