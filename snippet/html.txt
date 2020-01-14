@@ -1,0 +1,121 @@
+{
+/*
+	// Place your snippets for Vue-html here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+
+"intext": {
+	"prefix": "intext",
+	"body": ["<input type='text' class='form-control' v-model='variable'>"],
+	"description": "resolve"
+		  },
+
+
+"inpassword": {
+	"prefix": "inpassword",
+	"body": ["<input type='password' class='form-control' v-model='variable'>"],
+	"description": "resolve"
+		  },
+
+"inradio": {
+	"prefix": "inradio",
+	"body": ["<input type='radio' v-model='variable'>"],
+	"description": "resolve"
+		  },
+
+"insubmit": {
+	"prefix": "insubmit",
+	"body": ["<input type='submit' class='btn btn-success'  value='OK'>"],
+	"description": "resolve"
+			},
+
+"inreset": {
+	"prefix": "inreset",
+	"body": ["<input type='reset' class='btn btn-warning' value='cancel'>"],
+	"description": "resolve"
+		  },
+
+"incheck": {
+	"prefix": "incheck",
+	"body": ["<input type='checkbox'  v-model='variable'>"],
+	"description": "resolve"
+		  },
+
+"infile": {
+	"prefix": "infile",
+	"body": ["<input type='file' class='form-control'>"],
+	"description": "resolve"
+		  },
+
+"inselect": {
+	"prefix": "inselect",
+	"body": ["<select v-model='variable' class='form-control'>",
+			 	"\t<option value=''>choose</option>",
+			 "</select>"],
+	"description": "resolve"
+			},
+"btn": {
+	"prefix": "bcn",
+	"body": ["<button @click='fn()' class='btn btn-primary'>Click</button>"],
+	"description": "button-class"
+	   },
+
+"genform": {
+	"prefix": "genform",
+	"body": ["<section class='container' >",
+		"\t\t<div class='row' style='margin-top:50px;' >",
+		  "\t\t\t<div class='col-md-6'>",
+			"\t\t\t\t<div class='box box-primary'>",
+			  "\t\t\t\t\t<div class='box-header with-border'>",
+				"\t\t\t\t\t\t<h3 class='box-title'>Title Form</h3>",
+			  "\t\t\t\t\t</div>",
+			  "\t\t<form role='form'>",
+				"\t\t\t<div class='box-body'>",
+				  "\t\t\t\t<div class='form-group'>",
+					"\t\t\t\t\t<label for='exampleInputEmail1'>Data</label>",
+					"\t\t\t\t\t<input type='password' class='form-control' v-model='variable'>",
+				  "\t\t\t\t</div>",
+				"\t\t\t</div>",
+				"\t\t\t<div class='box-footer'>",
+				   "\t\t\t\t<button @click='fn()' class='btn btn-primary'>Click</button>",
+				"\t\t\t</div>",
+			  "\t\t</form>",
+			"\t\t\t\t</div>",
+		  "\t\t\t</div>",
+		"\t\t</div>",
+		  "</section>"],
+	"description": "genform"
+	   },
+"form_blog": {
+	"prefix": "form_blog",
+	"body": ["<div class='form-group'>",
+			 "\t<label for='exampleInputEmail1'>Data</label>",
+			 "\t",
+	         "</div>"],
+	"description": "form-blog"
+	   },
+"var": {
+	"prefix": "var",
+	"body": ["{{  }}"],
+	"description": "var"
+	   },
+
+"vdel": {
+	"prefix": "var",
+	"body": ["v-model=''"],
+	"description": "var"
+	   }	   
+
+}

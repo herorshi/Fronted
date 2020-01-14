@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" /> -->
+    <!-- <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+
+    <title>React App</title>
+  </head>
+  <body>
+    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
+    <div id="root"></div>
+    <a href="#" data-href="about">about</a>
+    <a href="#" data-href="/contact">Contact</a>
+    <a href="#" data-href="/forum">forum</a>
+    <p id="content"></p>
+     <script>
+        const pageContent = {
+          '/about':'About Content',
+          '/contact': 'Contact Content',
+          'forum':'Forum Content'
+        };
+        const loadContent = ()=>{
+             const content = pageContent[location.pathname]
+             document.getElementById('content').innerHTML = content;
+        }
+       document.querySelectorAll('a').forEach(link =>{
+         link.addEventListener('click',e =>{
+          e.preventDefault();
+          const path = link.getAttribute('data-href');
+          console.log(path);
+          // history.pushState(path,'',path);
+          history.replaceState(path,'',path);
+          loadContent();
+         })
+       });
+       window.onpopstate = (event)=>{ // เกิดขึ้นเมื่อมีการกดปุ่ม back
+            loadContent();
+            console.log(event.state); // ใช้ getdata จาก pushState
+       }
+       document.getElementsByClassName('labels');
+       document.getElementById('myH1').style.visibility  = 'hide';
+       document.getElementById('labes')
+       
+     </script>
+  </body>
+</html>

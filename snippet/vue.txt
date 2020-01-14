@@ -1,0 +1,165 @@
+{
+/*
+	// Place your snippets for Vue.js here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+"iife":{
+	"prefix":"iife",
+	"body":"console.log('$1')",
+	"description": "Log output to console"
+},
+  
+
+"temvue":{
+	"prefix":"temvue",
+	"body":"<template>\n\t<div id='app'>\n\t\n\t</div>\n</template>\n\n\n<script>\n\texport default\n{\n\t\tdata(){\n\t\t\t\treturn{ \n\t\t\t\t\t\tname:'Vue'\n\t\t\t\t\t  };\n\t\t\t },\n\t\tmethods:   { },\n\t\tcomputed:  { },\n\t\twatch:     { },\n\t\tprops:     [''],\n\t\tcomponents:{ },\n\t\tmounted()  { },\n\t\tmixins:    [ ],\n}\n</script>\n\n\n<style scoped>\n\t\n</style>",
+	"description": "Log output to console"
+},
+
+"httpget":{
+   
+	  "prefix":"httpget",
+	  "body": ["this.$http.get('/url').then(response => {",
+
+			 "\t\tconsole.log(response.body)",
+			 "\t\t\t\t\t\t\t\t\t   },", 
+			 "Error => {",
+			 "\t\t\tconsole.log(Error);",
+			"\t\t });" 
+		      ],
+	    "description": "get HTTP"  
+          },
+"httppost":{
+	"prefix":"httppost",
+	"body":["this.$http.post('/url' ,{parameter1:'metasitstar@gmail.com',parameter2:3000})",
+		".then(response => {console.log(response.body);},", 
+			  "Error => {console.log('ERROR');}",
+			 ");"]
+		   },
+
+"ij":{
+	"prefix":"ij",
+	"body":"import name from './name.js';",
+	"description": "import file .js"  
+     },
+ 
+"iv":{
+	 "prefix":"iv",
+	 "body":"import name from '../components/name.vue'",
+	 "description": "import file .vue"
+		},
+ "post":{
+			 "prefix":"post",
+			 "body":["axios.post('/', {})",
+				 ".then((response)=>  {",
+				  "console.log(response.data);",
+				   "})",
+				".catch((error)=> {",
+				  "console.log(error);",
+				  "});"]
+ },
+
+ "form_data":{
+				 "prefix":"form_data",
+				 "body":["var formData = new FormData();",
+					"formData.append('image', this.$refs.fileInput.files[0]);"]
+   },
+
+ "axpost":{
+				"prefix":"axpost",
+				"body":["axios({",
+								"method: 'post',",
+								"url: '/',",
+								"data:formData,",
+								"headers: {'Content-Type': 'multipart/form-data'},",			
+								"})\n.then((success)=>{ console.log('success')});" 
+						]
+		  },
+"axget":{
+				"prefix":"axpost",
+				"body":["axios({",
+							"method: 'get',",
+							"url: '/',",
+							"headers: {'Content-Type': 'multipart/form-data'},",			
+							"})\n.then((success)=>{ console.log('success')});" 
+					]
+	  },
+	  "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+
+	"fnthen": {
+		"prefix": "fnthen",
+		"body": [
+			"fn().then((value)=>{})"
+		],
+		"description": "Log output to console"
+	},
+
+
+	"reans": {
+		"prefix": "reans",
+		"body": [
+			" return  resolve(success.data);"
+		],
+		"description": "reans"
+	},
+ 
+	"intext": {
+		"prefix": "intext",
+		"body": ["<input type='text' class='form-control' v-model='var'"],
+		"description": "resolve"
+			  },
+
+	"inradio": {
+		"prefix": "inradio",
+		"body": ["<input type='radio' class='form-control' v-model='var'"],
+		"description": "resolve"
+			  },
+
+	"incheck": {
+		"prefix": "incheck",
+		"body": ["<input type='checkbox' class='form-control' v-model='var'"],
+		"description": "resolve"
+			  },
+
+	"inimage": {
+		"prefix": "inimage",
+		"body": ["<input type='image' class='form-control' v-model='var'"],
+		"description": "resolve"
+			  },
+
+	"inselect": {
+		"prefix": "inselect",
+		"body": ["<select v-model='var' class='form-control'>",
+				 "<option value=''>choose</option>",
+				 "</select>"],
+		"description": "resolve"
+				},
+	"ic": {
+		"prefix": "ic",
+		"body": ["import * as nameclass from './name.js';"],
+		"description": "resolve"
+		  }
+
+
+
+				
+
+}

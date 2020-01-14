@@ -1,0 +1,100 @@
+import React, { Component } from "react";
+import { createStore,combineReducers,applyMiddleware } from "redux";
+import {Provider} from 'react-redux'
+const state_start = {
+  result: 15000,
+  value: []
+};
+
+class App extends Component {
+  state = {};
+  componentDidMount() {
+    console.log("Mount");
+    const user_reducer = (state={name:'Metasit',Age:25},action)=>{
+        switch (action.type) {
+          case "setName":
+              state ={
+                ...state,
+                name:action.payload
+              }
+            break;
+          case "setAge":
+            console.log("SetAge",action);
+              state ={
+                ...state,
+                Age:action.payload
+              }
+            break;
+          default:
+            
+        }   
+      return state
+    }
+    
+    const Employee_reducer = (state = state_start, action) => {
+      switch (action.type) {
+        case "ADD":
+
+          state = {
+            ...state,
+            result:state.result+action.payload,
+            value:[...state.value,(state.result+action.payload)]
+          }
+          console.log(state);
+          break;
+        case "SUBTRACT":
+          // state -=action.palyload;
+          break;
+        default:
+      }
+      return state;
+    };
+    // const store = createStore(Employee_reducer)
+    // const store = createStore(combineReducers({Employee_reducer,user_reducer}))
+    const mylogger = (store)=>(next)=>(action)=>{
+      //ทำก่อน ที่จะไป action จาก dispatch
+      console.log("Log Action",action);
+      next(action);
+    }
+
+
+    const store = createStore(combineReducers({Employee_reducer,user_reducer}),{},applyMiddleware(mylogger))
+    store.subscribe(()=>{
+      // console.log("Update Stroe:", store.getState());
+    })
+    store.dispatch({
+      type:"ADD",
+      payload:0
+    })
+
+    store.dispatch({
+      type:"ADD",
+      payload:15000
+    })
+    store.dispatch({
+      type:"ADD",
+      payload:15000
+    })
+    store.dispatch({
+      type:"setName",
+      payload:"Panupijarn"
+    })
+    store.dispatch({
+      type:"setAge",
+      payload:15,
+      namex:store.getState().user_reducer['name']
+    })
+
+    console.log(store.getState(),'Store');
+    console.log();
+
+  }
+
+  render() {
+    return (
+        <div>React </div>
+    );
+  }
+}
+
+export default App;

@@ -1,0 +1,3138 @@
+
+
+  {
+	/*
+		// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+		// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+		// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+		// same ids are connected.
+		// Example:
+		"Print to console": {
+			"prefix": "log",
+			"body": [
+				"console.log('$1');",
+				"$2"
+			],
+			"description": "Log output to console"
+		}
+	*/
+	"iife":{
+		"prefix":"iife",
+		"body":"console.log('$1')",
+		"description": "Log output to console"
+	},
+	"form_data":{
+		"prefix":"form_data",
+		"body":["var formData = new FormData();",
+		   "formData.append('image', this.$refs.fileInput.files[0]);"]
+	},
+	
+	"data_form":{
+		"prefix":"data_form",
+		"body":["formData.append('image', this.$refs.fileInput.files[0]);"]
+	},
+	
+	"axpost":{
+	   "prefix":"axpost",
+	   "body":["axios({",
+					   "method: 'post',",
+					   "url: '/',",
+					   "data:formData,",
+					   "headers: {'Content-Type': 'multipart/form-data'},",			
+					   "})\n.then((success)=>{ console.log('success')});" 
+			   ]
+	},
+	"axget":{
+	   "prefix":"axpost",
+	   "body":["axios({",
+				   "method: 'get',",
+				   "url: '/',",
+				   "headers: {'Content-Type': 'multipart/form-data'},",			
+				   "})\n.then((success)=>{ console.log('success')});" 
+		   ]
+	},
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');"
+		],
+		"description": "Log output to console"
+	},
+	
+	
+	"reans": {
+		"prefix": "reans",
+		"body": [
+			" return  resolve(success.data);"
+		],
+		"description": "reans"
+	},
+	
+	"resolve": {
+		"prefix": "fnj",
+		"body": [
+			"function name(){",
+			" return new Promise(resolve => { return  resolve(success.data);  }) ",
+			"}"
+		],
+		"description": "resolve"
+	},
+	
+	"router": {
+		"prefix": "im_router",
+		"body": [
+			"export default new VueRouter({routes});"
+				],
+		"description": "resolve"
+	},
+	
+	"ij":{
+		"prefix":"ij",
+		"body":"import name from './name.js';",
+		"description": "import file .js"  
+		 },
+	 
+	"iv":{
+		 "prefix":"iv",
+		 "body":"import name from '@/components/name.vue'",
+		 "description": "import file .vue"
+			},
+			
+	"router_full": {
+		"prefix": "router_full",
+		"body": [
+			"import Vue from 'vue'",
+			"import VueRouter from 'vue-router'",
+			"let routes = [",
+						  "\t\t\t\t{",
+							"\t\t\t\t\tpath:'/',",
+							"\t\t\t\t\tname:'',",
+							"\t\t\t\t\tcomponent:require('./components/'),",
+							"\t\t\t\t\tmode:'history',",
+							"\t\t\t\t\tchildren: [{}]",
+						  "\t\t\t\t},",
+						  "\t\t\t\t{",
+							"\t\t\t\t\tpath:'*',",
+							"\t\t\t\t\tredirect:'/'",
+						  "\t\t\t\t}",
+						"\t\t\t]",
+						"export default new VueRouter( { routes } );"
+				],
+		"description": "resolve"
+	},
+	
+	   
+	"data_route": {
+		"prefix": "data_route",
+		"body": [
+			"{",
+				"path:'/',",
+				"name:'',",
+				"component: () => import('./components/$1'),",
+				"mode:'history',",
+				"children: [{}]",
+			"},"
+				],
+		"description": "resolve"
+	},
+
+	
+	"for_loop_sum": {
+		"prefix": "for_loop_sum",
+		"body": [
+			"for(var x = 0; x < null ; x++){",
+			"\n}"
+				],
+		"description": "resolve"
+	},
+	
+	"for_loop_minus": {
+		"prefix": "for_loop_minus",
+		"body": [
+			"for(var x = 100; x > null; x--){",
+			"\n}"
+				],
+		"description": "resolve"
+	},
+	"fnthen": {
+		"prefix": "fnthen",
+		"body": [
+			"fn().then((value)=>{})"
+		],
+		"description": "Log output to console"
+	},
+	
+	"intext": {
+		"prefix": "intext",
+		"body": ["<input type='text' class='form-control' v-model='var'>"],
+		"description": "resolve"
+			  },
+	
+	"inradio": {
+		"prefix": "inradio",
+		"body": ["<input type='radio' class='form-control' v-model='var'>"],
+		"description": "resolve"
+			  },
+	
+	"incheck": {
+		"prefix": "incheck",
+		"body": ["<input type='checkbox' class='form-control' v-model='var'>"],
+		"description": "resolve"
+			  },
+	
+	"inimage": {
+		"prefix": "inimage",
+		"body": ["<input type='image' class='form-control' v-model='var'>"],
+		"description": "resolve"
+			  },
+	
+	"inselect": {
+		"prefix": "inselect",
+		"body": ["<select v-model='var' class='form-control'>",
+				 "<option value=''>choose</option>",
+				 "</select>"],
+		"description": "resolve"
+				},
+				"Forloop": {
+					"prefix": "forloop",
+					"body": [
+						"for (var ${index} = 0; ${index} < ${array}.length; ${index}++) {",
+						"\tvar ${element} = ${array}[${index}];",
+						"\t$0",
+						"}"
+					],
+					"description": "For Loop"
+				},
+				"ic": {
+					"prefix": "ic",
+					"body": ["import * as nameclass from './name.js';"],
+					"description": "resolve"
+					  },
+				"confirmswal": {
+					"prefix": "confirmswal",
+					"body": ["vm.$0swal({",
+						"\ttitle: 'Are you sure?',",
+						"\ttext: 'You wont be able to revert this!',",
+						"\ttype: 'warning',",
+						"\tshowCancelButton: true,",
+						"\tconfirmButtonColor: '#3085d6',",
+						"\tcancelButtonColor: '#d33',",
+						"\tconfirmButtonText: 'Yes, delete it!'",
+					  "\t}).then((result) => {",
+						"\t\tif (result.value) {",
+						  "\t\t\tswal(",
+							"\t\t\t\t'Deleted!',",
+							"\t\t\t\t'Your file has been deleted.',",
+							"\t\t\t\t'success'",
+						  "\t\t\t    )",
+						"\t\t\t\t  }",
+					  "\t\t\t    })"],
+					"description": "resolve"
+					  },
+	"texvalue": {
+		"prefix": "texvalue",
+		"body": ["document.getElementById('id').value"],
+		"description": "resolve"
+	},	
+	"sole": {
+		"prefix": "sole",
+		"body": ["console.log($1);"],
+		"description": "console.log($1);"
+	},
+	"get_route_node": {
+		"prefix": "get_route_node",
+		"body": ["app.get('/$1',function(req,res){",
+				 "\t${2:res.sendfile('app5.html');}",
+				 "});"],
+		"description": "app.get(node)"
+	},
+	"post_route_node": {
+		"prefix": "post_route_node",
+		"body": ["app.post('/$1',function(req,res){",
+				 "\t",
+				 "});"],
+		"description": "app.get(node)"
+			  },
+	"nodejson": {
+		"prefix": "nodejson",
+		"body": [			  
+		"res.json({",
+			"\t$1",
+		"});"],
+		"description": "app.get(node)"
+			  },
+
+
+
+
+	"nodetemplate": {
+		"prefix": "nodetemplate",
+		"body": ["var express = require('express');",
+				 "var app    = express();",
+				 "var fs     = require('fs');", 
+				 "var body   = require('body-parser')",
+				 "var cookie = require('cookie-parser');",
+				 "app.use(body());",
+				 "app.use(cookie());",
+				 "var pg = require('pg');",
+			 "//////////////////Detail///////////////",
+			 "\n\n",
+			 "app.get('/',(req,res)=>{",
+				"res.end('Hello Metasit');",
+			 "});",
+			 "\n\n",
+			 "//////////////////Detail///////////////",
+			"var server = app.listen(8081,function(){",
+				"var host = server.address().address",
+				"var port = server.address().port", 
+				"console.log('Application Run At http://%s:%s;',host,port);",
+			 "});"],
+		"description": "template_nodeJS"
+			  },
+	"getax": {
+		"prefix": "getax",
+		"body": ["axios.get('http://localhost:8081/data')",
+				 ".then((success)=>{ ${1:} })",
+				 ".catch((error)=>{})"],
+		"description": "shotget axios"
+			  },
+	"postax": {
+		"prefix": "postax",
+		"body": ["axios.post('http://localhost:8081/data',obj)",
+				 ".then((success)=>{})",
+				 ".catch((error)=>{})"],
+		"description": "shotpost axios"
+			  },
+	"temreact": {
+		"prefix": "temreact",
+		"body": ["import React, { Component } from 'react'",
+			     "import {connect} from 'react-redux'\n\n",
+			"class com1 extends Component{\n",
+				"\tconstructor(props){",
+					"\t\tsuper(props);",
+					"\t\tthis.state = {}",
+					"\t  }",
+				"\t\ttest = (e) =>{",
+					"\t\t\te.preventDefault();",
+				"\t\t}\n",
+					
+				"\t\trender(){",
+					"\t\t\treturn(",
+						"\t\t\t\t<div>",
+							"\t\t\t\t\t<h1>com1</h1>",
+						"\t\t\t\t</div>",
+					"\t\t\t)",
+				"\t\t}",
+			"\t}",
+			"export default  com1;",
+			"//export default connect()(com1)"],
+		"description": "template_REACT"
+			  },
+	"imrouterreact": {
+		"prefix": "imrouterreact",
+		"body": ["import { Router, Route, IndexRoute, hashHistory } from 'react-router' "],
+		"description": "shotpost axios"
+				},
+	"For ": {
+		"prefix": "forarr",
+		"body": [
+			"for (let ${index} = 0; ${index} < ${array}.length; ${index}++) {",
+			"\tconst ${element} = ${array}[${index}];",
+			"\t$0",
+			"}"
+		],
+		"description": "For Loop"
+	},
+	"Console log": {
+		"prefix": "clog",
+		"body": "console.log('$1');",
+		"description": "Log output to console"
+	},
+	"beforeguard": {
+	"prefix": "beforeguard",
+	"body": [
+		"beforeEnter: (to, from, next) => {",	
+		"\tnext();",
+		"}",
+		],
+	"description": "guardbefore"
+					},
+	"route_push": {
+	"prefix": "route_push",
+	"body": [
+		"this.$$router.push({name:$1})"
+		],
+	"description": "router  by name in vue"
+				  },
+				
+	"cookset": {
+	"prefix": "cookset",
+	"body": [
+		"this.$$cookie.set($1, )"
+		],
+	"description": "set value cookie"
+				},
+	"cookget": {
+		"prefix": "cookget",
+		"body": [
+			"this.$$cookie.get('$1')",
+		
+			],
+		"description": "set value cookie"
+				},
+    "placeholder": {
+        "prefix": "placeholder",
+        "body": [
+		  "var x =  ${1:foo}",
+		  "var x2 =  ${1:xoo}",
+
+        ],
+        "description": "placeholder"
+	},
+	"choice": {
+        "prefix": "choice",
+        "body": [
+		  "${1|one,two,three|}",
+
+        ],
+        "description": "do condition snippet"
+	},
+	"tranfrom": {
+        "prefix": "tranfrom",
+        "body": [
+		  "var x =  ${TM_FILENAME/(.*)/${1:/lowcase}/}",
+        ],
+        "description": "Name File"
+	},
+	"grave": {
+        "prefix": "grave",
+        "body": [
+		  "`$1`",
+        ],
+        "description": "Name File"
+	},
+	"ajax_headers": {
+        "prefix": "ajax_headers",
+        "body": [
+			"headers:{",
+				"'Content-Type': 'application/json',",
+				"'x-access-token':''", 
+			"},"
+        ],
+        "description": "Name File"
+	},
+	"fetch": {
+        "prefix": "fetch",
+        "body": [
+			"fetch('https://jsonplaceholder.typicode.com/posts', {mode: 'cors'})",
+			".then(function(response) {",
+			"\t\treturn response.text();",
+			"})",
+			".catch(function(error) {",
+			"\tconsole.log('Request failed', error)",
+			"});",
+        ],
+        "description": "fetch request javascript"
+	},
+
+	"cookie": {
+        "prefix": "cookie",
+        "body": [
+		  "document.cookie = 'name=$1';",
+        ],
+        "description": "cookie"
+	},
+	"sqvue": {
+        "prefix": "sqvue",
+        "body": [
+		  "this.$$route.query.$1"
+        ],
+        "description": "query string router vue"
+	},
+	"imall": {
+        "prefix": "imall",
+        "body": [
+		  "import * as data from './$1'"
+        ],
+        "description": "import file  type All"
+	},
+	"eventlist": {
+        "prefix": "eventlist",
+        "body": [
+		  "$1.addEventListener('click',e =>{\n",
+           
+			"})"
+        ],
+        "description": "import file  type All"
+	},
+	"docbyid": {
+        "prefix": "docbyid",
+        "body": [
+		  "document.getElementById('$1')",
+        ],
+        "description": "import file  type All"
+	},
+	"pdf": {
+        "prefix": "preventdefault",
+        "body": [
+		  "event.preventDefault()",
+        ],
+        "description": "import file  type All"
+	},
+	"docqs": {
+        "prefix": "queryselect",
+        "body": [
+		  "document.querySelector('$1');",
+        ],
+        "description": "import file  type All"
+	},
+	"vuenew": {
+        "prefix": "newvue",
+        "body": [
+		"const vm = new Vue({",
+			"\t\tel:'#app',",
+			"\t\tdata:function(){   return{  name:$1  }    },",
+			"\t\tmethods:{},",
+			"\t\tcomputed:{},",
+			"\t\twatch:{},",
+			"\t\tconponents:{},",
+			"\t\tcreated(){},",
+			"\t\tactivated(){},",
+			"\t\tprops: {status: String}",
+			"\t\tmounted(){},",
+	 "})",
+        ],
+        "description": "import file  type All"
+	},
+	"nexttick": {
+        "prefix": "nexttick",
+        "body": [
+			"this.$nextTick(function(){",
+				"\t$1",
+				"});"
+        ],
+        "description": "import file  type All"
+	},
+	"newmap": {
+        "prefix": "newmap",
+        "body": [
+			"map = new google.maps.Map(document.getElementById('map'), {",
+				"\tcenter: {lat: -34.397, lng: 150.644},",
+				"\tzoom: 8",
+			  "});"
+        ],
+        "description": "create googlemap"
+	},
+
+	"newmarker": {
+        "prefix": "newmarker",
+        "body": [
+			"var marker = new google.maps.Marker({",
+				"\tposition: {lat: $1, lng: 00},",
+				"\tmap: map,",
+				"\tlabel: {text: `A`, color: 'white'},",
+			  "});"
+        ],
+        "description": "create marker google map"
+	},
+
+	"objectvalues": {
+        "prefix": "ov",
+        "body": [
+					"Object.values($1);"
+        ],
+        "description": "function Object.values()"
+	},
+	"activated": {
+        "prefix": "av",
+        "body": [
+					"activated(){ \n\t$1\n },"
+        ],
+        "description": "create marker google map"
+	},
+	
+	"random": {
+        "prefix": "random",
+        "body": [
+			"Math.floor(Math.random() * 100$1);"
+        	],
+        "description": "create marker google map"
+	},
+	"get_tag_name": {
+        "prefix": "gettag",
+        "body": [
+			"document.getElementsByTagName('BUTTON')[$1];"
+        	],
+        "description": "Tag name"
+	},
+	"get_item_name": {
+        "prefix": "getitem",
+        "body": [
+			"var btn = document.getElementsByTagName('BUTTON')[0];",
+			"btn.attributes.getNamedItem('$1').value;"
+        	],
+        "description": "Tag name"
+	},
+	"get_attr": {
+        "prefix": "getattr",
+        "body": [
+			"document.getElementsByTagName('BUTTON')['numbertag$1'].attributes['index attr left to right'].name;"
+        	],
+        "description": "Tag name"
+	},
+	"remove_attr": {
+        "prefix": "getattr",
+        "body": [
+			"var btn = document.getElementsByTagName('INPUT')[0];",
+			"btn.attributes.removeNamedItem('type');"
+        	],
+        "description": "remove attribute"
+	},
+	"get_length": {
+        "prefix": "getlength",
+        "body": [
+			"var x = document.getElementsByTagName('BUTTON')[1].attributes.length;",
+			"document.getElementById('demo').innerHTML = x;"
+        	],
+        "description": "get length attribute"
+	},
+	"get_attr_value": {
+        "prefix": "attr_value",
+        "body": [
+			"var x = a.attributes.getNamedItem('name').value;",  
+			"document.getElementById('demo').innerHTML = x;"
+        	],
+        "description": "get value attribute in tag HTML"
+	},
+	"attr_set": {
+        "prefix": "attr_set",
+        "body": [
+		    "var h = document.getElementsByTagName('H1')[0];",
+			"var typ = document.createAttribute('class');",
+			"typ.value = 'democlas';",
+			"h.attributes.setNamedItem(typ);"	
+        	],
+        "description": "set attribute in tag HTML "
+	},
+
+
+
+	"attr_find": {
+        "prefix": "attr_find",
+        "body": [
+			"var btn = document.getElementsByTagName('BUTTON')[0];",
+			"var x = btn.getAttributeNode('id').specified;",
+			"document.getElementById('demo').innerHTML = x;"
+        	],
+        "description": " find attribute  tag html  "
+	},
+	"clear_log": {
+        "prefix": "log_clear",
+        "body": [
+			"console.clear();",
+        	],
+        "description": " clear log All  "
+	},
+
+	"count log": {
+        "prefix": "log_count",
+        "body": [
+			"console.clear();",
+        	],
+        "description": " count log  in Loop  "
+	},
+	"group log": {
+        "prefix": "log_group",
+        "body": [
+			"console.group();",
+			"\tconsole.log('$1');",
+			"console.groupEnd();"
+        	],
+        "description": " group log  in Loop  "
+	},
+	"colapsed log": {
+        "prefix": "log_Collapsed",
+        "body": [
+			"console.groupCollapsed();",
+			"console.log('$1');"
+        	],
+        "description": " Collapsed log  in Loop  "
+	},
+
+	"table log": {
+        "prefix": "log_table",
+        "body": [
+			"console.table($1);",
+        	],
+        "description": " Collapsed log  in Loop  "
+	},
+	"tagactive": {
+        "prefix": "tag_active",
+        "body": [
+			"var x = document.activeElement.tagName;",
+			"document.getElementById('demo').innerHTML = x;",
+        	],
+        "description": " tag active  "
+	},
+	"taga": {
+        "prefix": "taga",
+        "body": [
+			"document.anchors.length",
+        	],
+        "description": " tag active  "
+	},
+
+	
+	"baseurl": {
+        "prefix": "baseurl",
+        "body": [
+			"var x = document.baseURI;",
+			"document.getElementById('demo').innerHTML = x;",
+        	],
+        "description": " get url current  "
+	},
+	"styletag": {
+        "prefix": "docbystyle",
+        "body": [
+			"document.body.style.backgroundColor = 'yellow';",
+        	],
+        "description": " tag active  "
+	},
+	"createelement": {
+        "prefix": "elementadd_javascript",
+        "body": [
+			"var btn = document.createElement('BUTTON');",
+			"var t = document.createTextNode('CLICK ME');",
+			"btn.appendChild(t);",
+			"document.body.appendChild(btn);"
+        	],
+        "description": " tag active  "
+	},
+
+	"URI code": {
+        "prefix": "uricode",
+        "body": [
+			"var uri = 'my test.asp?name=ståle&car=saab';",
+			"var enc = encodeURI(uri);",
+			"var dec = decodeURI(enc);",
+			"var res = 'Encoded URI: ' + enc + '<br>'' + 'Decoded URI: ' + dec;",
+			"document.getElementById('demo').innerHTML = res;"
+        	],
+        "description": " uricode  "
+	},
+
+	"check nan": {
+        "prefix": "isnan",
+        "body": ["isNaN($1)"],
+        "description": " isnan "
+	},
+	"jsonparse": {
+        "prefix": "jsonparse",
+        "body": ["JSON.parse($1);"],
+        "description": " isnan "
+	},
+	"Math abs": {
+        "prefix": "mathabs",
+        "body": ["Math.abs(-7.25$1);"],
+        "description": " Math abs "
+	},
+
+	"Math round": {
+        "prefix": "mathabs",
+        "body": ["Math.round(2.5$1);"],
+        "description": " ถึง 5 ปัดเศษขึ้น "
+	},
+
+	"fixed decimal": {
+        "prefix": "tofixed",
+        "body": [".toFixed(2$1);"],
+        "description": " fixed decimal "
+	},
+	"get domain": {
+        "prefix": "getdomain",
+        "body": ["var x = document.domain;"],
+        "description": " get domain "
+	},
+
+	"element class": {
+        "prefix": "docbyclass",
+        "body": ["document.getElementsByClassName('$1');"],
+        "description": " select element by class  "
+	},
+
+	"element name": {
+        "prefix": "docbyname",
+        "body": ["document.getElementsByName('$1');"],
+        "description": " select element by name  "
+	},
+
+	"element Tagname": {
+        "prefix": "docbytagname",
+        "body": [
+			"var x = document.getElementsByTagName('LI');",
+			"document.getElementById('demo').innerHTML = x[1].innerHTML;"
+		],
+        "description": " select element by name  "
+	},
+
+
+	"Hasfocus": {
+        "prefix": "hasfocus",
+        "body": [
+			"var x = document.getElementById('demo');",
+			"if (document.hasFocus()) {",
+			  "x.innerHTML = 'The document has focus.';",
+			"} else {",
+			 " x.innerHTML = 'The document DOES NOT have focus.';",
+			"}"
+		],
+        "description": " Focus onelement   do Event  "
+	},
+
+	"numberimage": {
+        "prefix": "numberimage",
+        "body": ["document.images.length"],
+        "description": "number image"
+	},
+
+	"numberlinks": {
+        "prefix": "numberlink",
+        "body": ["var x = document.links.length;"],
+        "description": "Number Link"
+	},
+
+	"get url": {
+        "prefix": "geturl",
+        "body": ["document.referrer"],
+        "description": "geturl"
+	},
+	"removefunction": {
+        "prefix": "remvoefunction",
+        "body": ["document.removeEventListener('mousemove', myFunction);"],
+        "description": "removefunction"
+	},
+	"removenode": {
+        "prefix": "removenode",
+        "body": [
+			"var p = document.getElementsByTagName('P')[0];",
+			"document.renameNode(p, null, 'h1');"
+		],
+        "description": "removenode"
+	},
+	"docurl": {
+        "prefix": "docurl",
+        "body": ["document.URL"],
+        "description": "docurl"
+	},
+
+	"docbyclick": {
+        "prefix": "docbyclick",
+        "body": ["document.getElementById('myCheck').click();"],
+        "description": "docbyclick"
+	},
+	"count child element": {
+        "prefix": "childcount",
+        "body": ["document.getElementById('myDIV').childElementCount;"],
+        "description": "docbyclick"
+	},
+	"child counte number": {
+        "prefix": "childcount",
+        "body": [
+			"var c = document.body.childNodes;",
+			"var txt = '';",
+			"var i;",
+			"for (i = 0; i < c.length; i++) {",
+			  "txt = txt + c[i].nodeName + '<br>';",
+			"}"
+		],
+        "description": "docbyclick"
+	},
+
+	"bodychildren": {
+        "prefix": "bd",
+        "body": [
+			"var c = document.body.children;",
+			"var txt = '';",
+			"var i;",
+			"for (i = 0; i < c.length; i++) {",
+			"txt = txt + c[i].tagName + '<br>';",
+			"}"
+		],
+        "description": "body children "
+	},
+	"attr_add_class": {
+        "prefix": "attr_add_class",
+        "body": ["document.getElementById('myDIV').classList.add('mystyle$1');"],
+        "description": " Add class in element "
+	},
+	"attr_set_class": {
+        "prefix": "attr_set_class",
+        "body": ["document.getElementById('myDIV').className = 'mystyle$1';"],
+        "description": " Set class in element "
+	},
+	"clone element": {
+        "prefix": "element_clone",
+        "body": [
+			"var elmnt = document.getElementsByTagName('DIV')[0];",
+			"var cln = elmnt.cloneNode(true);",
+			"document.body.appendChild(cln);"
+		],
+        "description": " clone element "
+	},
+	
+	"Find children": {
+        "prefix": "findchildren",
+        "body": [
+			"var span = document.getElementById('mySPAN');",
+			"var div = document.getElementById('myDIV').contains(span);"
+		],
+        "description": "  find element child  if  find is found return on true "
+	},
+
+	"firstelement": {
+        "prefix": "firstelement",
+        "body": [
+			"var list = document.getElementById('myList').firstChild.innerHTML;",
+			"document.getElementById('demo').innerHTML = list;"
+		],
+        "description": " get First Element  "
+	},
+
+
+	"docbyfocus": {
+        "prefix": "docbyfocus",
+        "body": [
+			"document.getElementById('myAnchor$1').focus();",
+		],
+        "description": " Element on Focus  "
+	},
+
+	"get attribute ": {
+        "prefix": "attrget",
+        "body": [
+			"var x = document.getElementsByTagName('H1')[0].getAttribute('class');",
+		],
+        "description": " get attribute of element   "
+	},
+	"get size element ": {
+        "prefix": "get_element_size",
+        "body": [
+			"var rect = obj.getBoundingClientRect();",
+		],
+        "description": " Return the size of an element and its position relative   "
+	},
+	"attr check ": {
+        "prefix": "attr_check",
+        "body": [
+			"var x = document.getElementById('myBtn').hasAttribute('name$1');",
+		],
+        "description": "  check Attribute in element if found return true   "
+	},
+	"get value attr ": {
+        "prefix": "get_value_attr",
+        "body": [
+			"var x = document.getElementsByClassName('anchors$1')[0].id;",
+		],
+        "description": "  Get value Attribute    "
+	},
+
+	"innerHTML": {
+        "prefix": "innerhtml",
+        "body": [
+			"document.getElementById('').innerHTML = '$1';",
+		],
+        "description": "  Get value Attribute    "
+	},
+
+	"innerTEXT": {
+        "prefix": "innertext",
+        "body": [
+			"document.getElementById('myBtn').innerText;",
+		],
+        "description": "  get text in element   "
+	},	
+	"move element after": {
+        "prefix": "moveelement",
+        "body": [
+			"var s = document.getElementsByTagName('span')[0];",
+			"var h = document.getElementById('myH2');",
+			"h.insertAdjacentElement('afterend', s);"
+		],
+        "description": "   ย้าย element s ไปอยู่หลัง H   "
+	},	
+	"move element after HTML": {
+        "prefix": "moveelementHTML",
+        "body": [
+			"var h = document.getElementById('myH2');",
+			"h.insertAdjacentHTML('afterend', '<p>My new paragraph</p>');",
+		],
+        "description": "   ย้าย element s ไปอยู่หลัง H เป็น Tag html   "
+	},	
+	"Last Element ": {
+        "prefix": "lastelement",
+        "body": [
+			"document.getElementById('myList').lastChild",
+		],
+        "description": "   get element ตัวสุดท้าย  ในบรรทัดนั้น "
+	},
+
+	"Last Element child": {
+        "prefix": "lastchildelement",
+        "body": [
+			"var x = document.getElementById('myList').lastElementChild.innerHTML;",
+		],
+        "description": "   get element ตัวสุดท้าย   "
+	},
+
+	"remove attribute": {
+        "prefix": "removeattribute",
+        "body": [
+			"document.getElementsByTagName('H1')[0].removeAttribute('class');",
+		],
+        "description": "  ลบ attribute    "
+	},
+
+
+	"remove attr node": {
+        "prefix": "removeattrnode  ",
+        "body": [
+			"var elmnt = document.getElementsByTagName('H1')[0];",
+			"var attr = elmnt.getAttributeNode('class');",
+			"elmnt.removeAttributeNode(attr);"
+		],
+        "description": "  ลบ attribute    "
+	},
+	"removechildrean": {
+		"prefix": "removechildrean",
+		"body": [
+			"var list = document.getElementById('myList');",
+			"list.removeChild(list.childNodes[0]);"
+			],
+		"description": "  ลบ  childrean  ของ element    "
+	},
+	"element replaceChild": {
+		"prefix": "replacechild",
+		"body": [
+			"var textnode = document.createTextNode('water');",
+			"var item = document.getElementById('myList').childNodes[0];",
+			"item.replaceChild(textnode, item.childNodes[0]);"
+			],
+		"description": "   ทับ  Text child element   "
+	},
+	"Get width height": {
+		"prefix": "getwidthheight",
+		"body": [
+			"var elmnt = document.getElementById('content');",
+			"var y = elmnt.scrollHeight;",
+			"var x = elmnt.scrollWidth;",
+			],
+		"description": "   Get width height   "
+	},
+	"getscoreview": {
+		"prefix": "getscoreview",
+		"body": [
+			"var elmnt = document.getElementById('content');",
+			"elmnt.scrollIntoView();",
+			"<div id='myDIV'>",
+				"<div id='content'>",
+					"Some text inside an element.",
+				"</div>",
+			"</div>",
+			],
+		"description": "   ดู เนื้อหาจาก score   "
+	},
+	"Get score Left TOP": {
+		"prefix": "getscoreleft&top",
+		"body": [
+			"var elmnt = document.getElementById('myDIV');",
+			"var x = elmnt.scrollLeft;",
+			"var y = elmnt.scrollTop;"
+			],
+		"description": "   Get score left top   "
+	},
+	"set attribute": {
+		"prefix": "setattr",
+		"body": [
+				"document.getElementsByTagName('H1')[0].setAttribute('class', 'democlass$1');"
+			],
+		"description": "  setattr  "
+	},
+
+	"set attribute node": {
+		"prefix": "setattrnode",
+		"body": [
+			"var h1 = document.getElementsByTagName('H1')[0]; ",
+			"var att = document.createAttribute('class');"     ,  
+			"att.value = 'democlass';  ",                      
+			"h1.setAttributeNode(att);" 
+			],
+		"description": "  set attr node  "
+	},
+
+	"element set style": {
+		"prefix": "docbystyle",
+		"body": [
+			"document.getElementById('myH1').style.color = 'red$1';"
+			],
+		"description": "   Element set style  "
+	},
+
+	"get value tag": {
+		"prefix": "get_value_tag",
+		"body": [
+			"document.getElementById('myP').tagName;"
+			],
+		"description": "   get value tag  "
+	},
+	"Get content element": {
+		"prefix": "get_content",
+		"body": [
+			"document.getElementById('myBtn').textContent;"
+			],
+		"description": "   get content  in element  "
+	},
+
+	"Get title element": {
+		"prefix": "get_shot_attr",
+		"body": [
+			"document.getElementById('myAbbr').title;"
+			],
+		"description": "   get  title in element "
+	},
+
+
+	"attr_search": {
+		"prefix": "get_name",
+		"body": [
+			"document.getElementsByTagName('P').namedItem('goro$1')"
+			],
+		"description": " searcy by attribute   "
+	},
+	"setframe": {
+		"prefix": "setframe",
+		"body": [
+			"<iframe src='https://www.w3schools.com'></iframe>",
+			"window.frames[0].location = 'https://www.w3schools.com/jsref/'",
+			],
+		"description": " Set frame   "
+	},
+	"docbynodename": {
+		"prefix": "docbynodename",
+		"body": [
+			"document.getElementById('myP').nodeName;",
+			],
+		"description": "  get value node   "
+	},
+	"docbynodetype": { 
+		"prefix": "docbynodename",
+		"body": [
+			"document.getElementById('myP').nodeType;",
+			],
+		"description": "  get value node   "
+	},
+	"docbynodevalue": { 
+		"prefix": "docbynodenvalue",
+		"body": [
+			"document.getElementsByTagName('BUTTON')[0].childNodes[0].nodeValue;",
+			],
+		"description": "  get value node   "
+	},
+	"promise": { 
+		"prefix": "pm",
+		"body": [
+			"var promise1 = new Promise(function(resolve, reject) {\n",
+			      "});"
+			      ,
+			],
+		"description": " Create function Promise   "
+	},
+	"Get child": { 
+		"prefix": "getchild",
+		"body": [
+			".childNodes[index$1]",
+			],
+		"description": " Get child element   "
+	},
+	"Object seal": { 
+		"prefix": "os",
+		"body": [
+			"Object.seal(object1$1);",
+			],
+		"description": " ตัวแปร object เป็นค่าคงที่เพิ่ม object ตัวใหม่เข้าไปไม่ได้   "
+	},
+
+	"Math.floor": { 
+		"prefix": "mf",
+		"body": [
+			"Math.floor($1);",
+			],
+		"description": " ถ้ามีเศษปัดเศาขึ้น  "
+	},
+	"create component Vue": { 
+		"prefix": "gbcomvue",
+		"body": [
+			"Vue.component('namecomponent$1', {",
+				"\tdata: function () {",
+				  "\t\treturn {",
+				    "\t\t\tcount: 0",
+				  "\t}",
+				"}",
+				"template: '<div></div>'",
+			      "})"
+			],
+		"description": " สร้าง component ของ vue จาก instanse  "
+	},
+	"xtemplatevue": { 
+		"prefix": "xtemplatevue",
+		"body": [
+			"<script type='text/x-template' id='idname'>",
+			"<p>xtemplatevue</p>",
+			"</script>"
+			],
+		"description": " รูปแบบ template vue (xtemplate) "
+	},
+
+	"Random String": { 
+		"prefix": "randomstring",
+		"body": [
+		        "var name = [];",
+			"var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';",
+			"for (let x = 0; x < 10; x++) {",
+			     "\tvar text = '';",
+			"\tfor (var i = 0; i < 10; i++)  text += possible.charAt(Math.floor(Math.random() * possible.length));",
+			     "\tname.push(text);",
+			"}"
+			],
+		"description": " เป็นการ random string ออกมา "
+	},
+
+	"eachjq": { 
+		"prefix": "eachjq",
+		"body": [
+			"var arr = [ 'one', 'two', 'three', 'four', 'five' ];",
+			"var obj = { one: 1, two: 2, three: 3, four: 4, five: 5 };",
+			"jQuery.each( arr, function( i, val ) {",
+			"\tconsole.log(val$1);",
+			"return  val ;",
+			"});"
+			],
+		"description": " jquery each arry & object "
+	},
+
+	"eachjqshort": { 
+		"prefix": "eachjqshort",
+		"body": [
+			"$('#id$1').each(function(index,item){",
+				 "\tconsole.log(index,item,$(this));",
+			"});"
+			],
+		"description": " jquery each arry & object "
+	},
+
+	"hoverjq": { 
+		"prefix": "hoverjq",
+		"body": [
+			"$( 'li$1' ).hover(",
+			"\tfunction(event) {console.log('First');},",
+			"\tfunction(event) {console.log('Last');}",
+		      ");"
+			],
+		"description": " Event Hover jquery "
+	},
+
+	"findjquery": { 
+		"prefix": "findjquery",
+		"body": [
+			"$(this).find( 'element:last$1' )"
+			],
+		"description": " Event Find jquery "
+	},
+
+	"clickEventjquery": { 
+		"prefix": "clickeventjq",
+		"body": [
+			"$('.class$1').click(function(event) {",
+				"\tconsole.log(event,'event')",
+			 "});",
+			],
+		"description": " Click event "
+	},
+
+	"TrigerEventjquery": { 
+		"prefix": "trigerjq",
+		"body": [
+			"$('.class').on('event_name',function(){console.log('event_name');});",
+			"$('.class$1').trigger('event_name');"
+			],
+		"description": " Event triger Jquery "
+	},
+	"nth-last-child": { 
+		"prefix": "nlc",
+		"body": [
+				"$('ul li:nth-last-child(2$1)').css();"
+			],
+		"description": " เลือก element children ลพดับที่ 2 จาก สุดท้าย "
+	},
+	"nth-child": { 
+		"prefix": "nc",
+		"body": [
+				"$( 'ul li:nth-child(2$1)' ).css();"
+			],
+		"description": " เลือก element children ลพดับที่ 2 จาก ลำดับแรก "
+	},
+	"notjquery": { 
+		"prefix": "notjquery",
+		"body": [
+				"$('input:not(input[type*=checkbox]) ').attr('class','form-control').css({ color:'green'});"
+			],
+		"description": " ยกเว้น select ที่ใส่ ในที่นี้คือ ยกเว้น type checkbox "
+	},
+
+	"afterelementselect": { 
+		"prefix": "after_el_jq",
+		"body": [
+				"$( '#prev ~ div' ).css( 'border', '3px groove blue' ); "
+			],
+		"description": " select div หลัง id prev "
+	},
+	"has_select_jq": { 
+		"prefix": "has_select_jq",
+		"body": [
+				"$('div:has(element$1)')"
+			],
+		"description": " select div ที่ีมี element "
+	},
+	"add_class_jquery": { 
+		"prefix": "addclass_jquery",
+		"body": [
+				"( '.class$1' ).addClass('myClass');"
+			],
+		"description": " เพิ่ม class element "
+	},
+	"has_class_jquery": { 
+		"prefix": "hasclass_jquery",
+		"body": [
+				"$('.class$1').hasClass('nameclass' );"
+			],
+		"description": " check class jquery return True False "
+	},
+	"remvoe_class_jquery": { 
+		"prefix": "removeclass_jquery",
+		"body": [
+				"$( 'element$1' ).removeClass( 'myClass noClass' )"
+			],
+		"description": " ลบ class ของ jquery "
+	},
+
+	"toggle_class_jquery": { 
+		"prefix": "toggle_class_jquery",
+		"body": [
+				"$(.class$1).toggleClass('name_class');"
+			],
+		"description": " สลับ class ของ jquery "
+	},
+
+
+	"index_element_jquery": { 
+		"prefix": "index_element_jquery",
+		"body": [
+			"var listItem = document.getElementById('bar');",
+			"console.log($( 'li' ).index( listItem ));"
+			],
+		"description": " get index jquery "
+	},
+
+
+	"select_one_node_jquery": { 
+		"prefix": "one_node_jquery",
+		"body": [
+			"$('button:only-of-type').text( 'Alone' ).css( 'border', '2px blue solid' );"
+			],
+		"description": " get index jquery "
+	},
+	"nth-last-of-type": { 
+		"prefix": "nlot_jquery",
+		"body": [
+			"$('ul li:nth-last-of-type(2)').css({});"
+			],
+		"description": " get type element ล่าสุด จากลำดับสุดท้าย "
+	},
+	"value_input_jquery": { 
+		"prefix": "value_input_jquery",
+		"body": [
+			"$('input[type=text]').val();"
+			],
+		"description": " get ค่า text input ของ jquery"
+	},
+	"after_content_jquery": { 
+		"prefix": "after_content_jquery",
+		"body": [
+			"$('.class$1').after('<b>Hello</b>');"
+			],
+		"description": " ใส่เนื้อหาหลัง Element  "
+	},
+	"append_jquery": { 
+		"prefix": "append_jquery",
+		"body": [
+			"$('.classname$1').append( '<p>Test</p>' );"
+			],
+		"description": " เพิ่มเนื้อหาใน Element  "
+	},
+
+
+	"appendTo_jquery": { 
+		"prefix": "appendto_jquery",
+		"body": [
+			"$('<p>Test</p>' ).appendTo( '.classname$1' );"
+			],
+		"description": " ใส่เนื้อหาเข้าไปใน class element "
+	},
+
+	"beforecontent_jquery": { 
+		"prefix": "beforecontent_jquery",
+		"body": [
+			"$( '.classname' ).before('<p>Test</p>')"
+			],
+		"description": " ใส่ เนื้อหา element ใน before ก่อน class ที่ ระบุุ หน้าบรรทะด "
+	},
+
+	"clone_jquery": { 
+		"prefix": "clone_jquery",
+		"body": [
+			"$( '.classname$1' ).clone().appendTo( '.classname' );"
+			],
+		"description": " copy เนื้อหาใส่ ใน class appedTo "
+	},
+
+	"empty_jquery": { 
+		"prefix": "empty_jquery",
+		"body": [
+			"$('.classname$1').empty();"
+			],
+		"description": " clear เนื้อหาใน Element ทั้งหมด "
+	},
+
+	"prepend_jquery": { 
+		"prefix": "prepend_jquery",
+		"body": [
+			"$('.clsssname$1').prepend('<p>Test</p>')"
+			],
+		"description": " ใส่ <p>Test</p> ก่อน classname "
+	},
+
+	"prependto_jquery": { 
+		"prefix": "prepend_jquery",
+		"body": [
+			"$( '<p>Test</p>' ).prependTo('.classname')"
+			],
+		"description": " เนื้อหา <p>Test</p>   ใส่ใน element classname "
+	},
+
+	"remove_element_jquery": { 
+		"prefix": "remove_element_jquery",
+		"body": ["$( '.classname' ).remove();"],
+		"description": " ลบ element ที่ระบุด้วย class ออก "
+	},
+	"remove_attr_jquery": { 
+		"prefix": "remove_attr_jquery",
+		"body": ["$('.classname$1').removeAttr( 'attribute' )"],
+		"description": " ลบ Attribute "
+	},
+
+	"replaceAll_jquery": { 
+		"prefix": "replaceAll_jquery",
+		"body": ["$('<p>Detail</p>').replaceAll('.classname$1');"],
+		"description": " ใส่ <p>Detail</p> ใน classname แทนของเดิมทั้งหมด ที่ีมี classname   "
+	},
+
+	"warp_jquery": { 
+		"prefix": "warp_jquery",
+		"body": ["$( '.inner$1' ).wrap( '<div class=new></div>' );"],
+		"description": " <div class='new'></div>  จะคลอบ  element ที่มี class inner ตามที่มีแต่ละอัน  "
+	},
+
+	"warpAll_jquery": { 
+		"prefix": "warpAll_jquery",
+		"body": ["$( '.inner' ).wrapAll( '<div class=new />');"],
+		"description": " <div class='new'></div>  จะคลอบ  element ที่มี class inner ทั้งหมด   "
+	},
+	"wrapInner_jquery": { 
+		"prefix": "wrapInner_jquery",
+		"body": ["$( '.inner' ).wrapInner( '<div class='new'></div>');"],
+		"description": " <div class='new'></div>  จะคลอบ  เนื้อหา ใน tag inner    "
+	},
+	"insert_before_jquery": { 
+		"prefix": "insert_before_jquery",
+		"body": ["$( '<p>Test</p>' ).insertBefore( '.inner' );"],
+		"description": " ใส่ <p>TEst</p> ก่อน element ที่มี class inner    "
+	},
+	"delegate_jquery": { 
+		"prefix": "delegate_jquery",
+		"body": [
+			"$( 'table$1').delegate( 'td', 'click', function() {",
+			"\t$( this ).toggleClass( 'chosen' );",
+			      "});",
+			],
+		"description": " delegate event ใส่ event ได้หลายตัว ของ jquery   "
+	},
+
+	"pagexy_jquery": { 
+		"prefix": "pagexy_jquery",
+		"body": [
+			"$( document ).on( 'mousemove', function( event ) {",
+			"\t$( '#log' ).text( 'pageX: ' + event.pageX + ', pageY: ' + event.pageY );",
+			"});"
+			],
+		"description": " get position x,y jquery   "
+	},
+
+	"first_child_jquery": { 
+		"prefix": "firstchild_jquery",
+		"body": [
+			"$( 'div span:first-child' ).css();"
+			],
+		"description": " get first child element   "
+	},
+
+	"hide_element_jquery": { 
+		"prefix": "hide_jquery",
+		"body": [
+			"$( '.classname$1' ).hide();"
+			],
+		"description": " ซ่อน Element  "
+	},
+
+	"insertAfter_jquery": { 
+		"prefix": "insertAfter_jquery",
+		"body": [
+			"$( '<p>Test</p>' ).insertAfter( '.inner$1' );"
+			],
+		"description": " เพิ่ม element หลัง class  element ที่กำหนด "
+	},
+	"target_jquery": { 
+		"prefix": "target_jquery",
+		"body": [
+			"$( 'body' ).click(function( event ) {",
+				"\t$( '#log' ).html('clicked:'+event.target('element'));",
+			"});"
+			],
+		"description": " เพิ่ม element หลัง class  element ที่กำหนด "
+	},
+
+
+	"getscript_jquery": { 
+		"prefix": "getscript_jquery",
+		"body": [
+			"$.getScript( 'filename.js' )",
+			".done(function( script, textStatus ) {console.log( textStatus );})",
+			".fail(function( jqxhr, settings, exception ){console.log('Fail');});"
+			],
+		"description": " เพิ่ม element หลัง class  element ที่กำหนด "
+	},
+
+	"inArray_jquery": { 
+		"prefix": "inArray_jquery",
+		"body": [
+				"jQuery.inArray( 'value_search', Array_variable)"
+			],
+		"description": "  ค้สหาค่า value_search ในตัวแปร Array_variable  "
+	},
+
+
+	"post_jquery": { 
+		"prefix": "post_jquery",
+		"body": [
+			"$.post( 'filename.html$1', function( data ) {",
+				"\tconsole.log(data);",
+			"});"
+			],
+		"description": "  Ajax post jquery  "
+	},
+	"get_jquery": { 
+		"prefix": "get_jquery",
+		"body": [
+			"$.get( 'filename.html$1', function( data ) {",
+				"\tconsole.log(data);",
+			"});"
+			],
+		"description": "  Ajax get jquery  "
+	},
+	"keypress_jquery": { 
+		"prefix": "keypress_jquery",
+		"body": [
+			"$( '.classname$1' ).keypress(function(event) {",
+				"\tconsole.log(event);",
+			"});"
+			],
+		"description": "  event keypress jquery  "
+	},
+	"load_element_jquery": { 
+		"prefix": "load_element_jquery",
+		"body": [
+			"$( '.classname$1' ).load( 'filename.html',function(event) {",
+				"\tconsole.log( 'succcess' );",
+			"});"
+			],
+		"description": "  event keypress jquery  "
+	},
+
+	"next_all_jquery": { 
+		"prefix": "next_all_jquery",
+		"body": [
+				"$('div:first').nextAll().css();"
+			],
+		"description": " ทำ css ถ้าไปทั้งหมดจาก selector  "
+	},
+
+	"next_jquery": { 
+		"prefix": "next_jquery",
+		"body": [
+				"$('.classname').next().css('background-color','red');"
+			],
+		"description": " element ถัดไปจาก classname จะทำ css  "
+	},
+	"not_sepate_jquery": { 
+		"prefix": "not_sepate_jquery",
+		"body": [
+				"$( 'li' ).not( ':even' ).css( 'background-color', 'red' );"
+			],
+		"description": " element ถัดไปจาก classname จะทำ css  "
+	},
+	"set_value_ext": { 
+		"prefix": "set_value_ext",
+		"body": [
+				".setValue('$1')"
+			],
+		"description": " set value ext.js  "
+	},
+	"get_value_ext": { 
+		"prefix": "get_value_ext",
+		"body": [
+				".getValue()"
+			],
+		"description": " get value ext.js  "
+	},
+
+	"focus_jquery": { 
+		"prefix": "focusjquery",
+		"body": [
+				"$( '.classname' ).focus(function() { console.log( 'focus' );});"
+			],
+		"description": " Event fucus jquery  "
+	},
+
+	"is_jquery": { 
+		"prefix": "isjquery",
+		"body": [
+			"$( 'ul' ).click(function( event ) {",
+				"\tvar target = $(event.target);",
+			"\tif( target.is('li')){",
+					"\t\ttarget.css( 'background-color', 'gray' );",
+				"\t}",
+			"});"
+			],
+		"description": " Event fucus jquery  "
+	},
+
+	"focusout_jquery": { 
+		"prefix": "focusoutjquery",
+		"body": [
+			"$( 'input$1' ).focusout(function() {",
+				"\tconsole.log('focusout');",
+			"});"
+			],
+		"description": " Event fucus jquery  "
+	},
+
+	"eq_jquery": { 
+		"prefix": "eqjquery",
+		"body": [
+			"$( 'li$1' ).eq( 2 ).css( 'background-color' , 'red' );"
+			],
+		"description": " Selector eq  jquery  "
+	},
+
+
+	"filter_jquery": { 
+		"prefix": "filterjquery",
+		"body": [
+			"$( 'li' ).filter( ':even' ).css( 'background-color', 'red' );"
+			],
+		"description": " Selector filter  jquery  "
+	},
+
+	"lt_jquery": { 
+		"prefix": "ltjquery",
+		"body": [
+			"$( 'td:lt(4$1)' ).css( 'backgroundColor', 'yellow' );"
+			],
+		"description": " Selector filter  jquery  "
+	},
+
+	"mousemove_jquery": { 
+		"prefix": "mousemovejquery",
+		"body": [
+			"$( '.classname$1' ).mousemove(function(event){",
+				"\tconsole.log('classname');",
+			"});"
+			],
+		"description": " Selector filter  jquery  "
+	},
+
+	"nextUntil_jquery": { 
+		"prefix": "nextuntiljquery",
+		"body": [
+			"$( '#term-1$1' ).nextUntil( term3, 'dd' ).css( 'color', 'green' );"
+			],
+		"description": " ทำ css id term-1 ถึง id term-3  "
+	},
+
+	
+	"class_jquery": { 
+		"prefix": "selectjquery",
+		"body": [
+			"$('.classname$1');"
+			],
+		"description": " ทำ css id term-1 ถึง id term-3  "
+	},
+
+	"select_attribue_jquery": { 
+		"prefix": "select_attr_jquery",
+		"body": [
+			"$('[id$1]');"
+			],
+		"description": " ทำ css id term-1 ถึง id term-3  "
+	},
+
+	
+	"vueprototype": { 
+		"prefix": "vueprototype",
+		"body": [
+			"Vue.prototype.appName = 'My App'"
+			],
+		"description": " variable global Vue  "
+	},
+
+
+	"lodashcdn": { 
+		"prefix": "lodashcdn",
+		"body": ["https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"],
+		"description": " include cdn global  "
+	},
+	"roundmath": { 
+		"prefix": "roundmath",
+		"body": ["Math.round(0.1$1)"],
+		"description": " ถ้ามีทศนิยมปัดเศษขึ้น  "
+	},
+	
+	"numberformat": { 
+		"prefix": "numberforamt",
+		"body": [".numberFormat(number$1)"],
+		"description": "  format number   "
+	},
+
+	"splice": { 
+		"prefix": "splice",
+		"body": ["array$1.splice(0,1);"],
+		"description": "  format number   "
+	},
+
+	"array pop first": { 
+		"prefix": "shiftarray",
+		"body": ["array$1.shift()"],
+		"description": "   ลบarray index แรกออก (ลำดับที่ 0)   "
+	},
+
+	"indexof": { 
+		"prefix": "indexofarray",
+		"body": ["array$1.indexOf()"],
+		"description": "   ลบarray index แรกออก (ลำดับที่ 0)   "
+	},
+   
+	"sortarray": { 
+		"prefix": "sortarray",
+		"body": ["array$1.sort()"],
+		"description": "    sort no. array   "
+	},
+	
+	"Get To day": {
+		"prefix":"getday",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getDate();"
+			],
+		"description": " Get To day "
+},
+"Get Day number": {
+		"prefix":"getdaynumber",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getDay();"
+			],
+		"description": " Get To day "
+},
+"Get Year": {
+		"prefix":"getyear",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getFullYear();"
+			],
+		"description": " Get To Year "
+},
+
+"Get Hourse": {
+		"prefix":"gethours",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getHours();"
+			],
+		"description": " Get To Year "
+},
+"Get Milliseconds": {
+		"prefix":"getmilliseconds",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getMilliseconds();"
+			],
+		"description": " Get To  Milliseconds "
+},
+"Get Minutes": {
+		"prefix":"getminutes",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getMinutes();"
+			],
+		"description": " Get To Year "
+},
+"Get Seconds": {
+		"prefix":"getsedoncs",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getSeconds();"
+			],
+		"description": " Get To Sedoncs "
+},
+
+"Get Month": {
+		"prefix":"getmonth",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getMonth()+1;"
+			],
+		"description": " Get To Month "
+},
+"Get Time": {
+		"prefix":"gettime",
+		"body": [
+	"var d = new Date();",
+	"var n = d.getTime();"
+			],
+		"description": " Get To Time "
+},
+"Get Now": {
+		"prefix":"datenow",
+		"body": [
+	"var n = Date.now();"
+			],
+		"description": " Get To now "
+},
+
+
+"Date prototye": {
+		"prefix":"date_prototype",
+		"body": [
+	"Date.prototype.myMet = function() {",
+		"if (this.getMonth() == 0){this.myProp = 'January'};",
+		"if (this.getMonth() == 1){this.myProp = 'February'};",
+		"if (this.getMonth() == 2){this.myProp = 'March'};",
+		"if (this.getMonth() == 3){this.myProp = 'April'};",
+		"if (this.getMonth() == 4){this.myProp = 'May'};",
+		"if (this.getMonth() == 5){this.myProp = 'June'};",
+		"if (this.getMonth() == 6){this.myProp = 'July'};",
+		"if (this.getMonth() == 7){this.myProp = 'August'};",
+		"if (this.getMonth() == 8){this.myProp = 'September'};",
+		"if (this.getMonth() == 9){this.myProp = 'October'};",
+		"if (this.getMonth() == 10){this.myProp = 'November'};",
+		"if (this.getMonth() == 11){this.myProp = 'December'};",
+		"};",
+		"var d = new Date();",
+		"d.myMet();",
+	 " document.getElementById('$1').innerHTML = d.myProp;"
+			],
+		"description": " date prototype "
+},
+
+"Set day": {
+		"prefix":"setday",
+		"body": [
+	"var d = new Date();",
+	"d.setDate($1);"
+			],
+		"description": " Set To day "
+},
+"Set Year": {
+		"prefix":"setyear",
+		"body": [
+	"var d = new Date();",
+	"d.setFullYear($1);"		
+			],
+		"description": " Set To Year "
+},
+"Set Month": {
+		"prefix":"setmonth",
+		"body": [
+	"var d = new Date();",
+	"d.setMonth($1);"	
+			],
+		"description": " Set To Month "
+},
+"Set Seconds": {
+		"prefix":"setseconds",
+		"body": [
+	"var d = new Date();",
+	"d.setSeconds($1);"
+			],
+		"description": " Set To Seconds "
+},
+
+"Set Time": {
+		"prefix":"settime",
+		"body": [
+	"var d = new Date();",
+	"d.setTime(1332403882588$1);"
+			],
+		"description": " Set To Time "
+},
+
+"Set Minutes": {
+		"prefix":"setminutes",
+		"body": [
+	"var d = new Date();",
+	"d.setMinutes($1);"
+			],
+		"description": " Set To Minutes "
+},
+
+"Set Milliseconds": {
+		"prefix":"setmilliseconds",
+		"body": [
+	"var d = new Date();",
+	"d.setMilliseconds(192);"
+			],
+		"description": " Set To Milliconds "
+},
+	
+	
+"routewatch": {
+	"prefix":"routewatch",
+	"body": [
+		"'$route' (to, from) {",
+			  "$1",
+		"}"
+		],
+	"description": " route change parameter "
+},
+	
+"Cdn Moment": {
+	"prefix":"cdnmoment",
+	"body": [
+		"https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js",
+		],
+	"description": " route change parameter "
+},
+
+"moment_current": {
+	"prefix":"moment_current",
+	"body": [
+		"moment(moment(), moment.ISO_8601).format()",
+		],
+	"description": " get current time "
+},
+
+"moment_object": {
+	"prefix":"moment_object",
+	"body": [
+		"moment({ y:2010, M:3, d:5, h:15, m:10, s:3, ms:123}).format()",
+		],
+	"description": " moment object "
+},
+
+"moment_timestamp_milliseconds": {
+	"prefix":"moment_timestamp_milliseconds",
+	"body": [
+		"moment(1318781876406$1).format()",
+		],
+	"description": " moment object "
+},
+
+
+"moment_timestamp_seconds": {
+	"prefix":"moment_timestamp_seconds",
+	"body": [
+		"moment.unix(1318781876$1)",
+		],
+	"description": " moment object "
+},
+
+"moment_array": {
+	"prefix":"moment_timestamp_seconds",
+	"body": [
+		"moment([year,month,day])",
+		],
+	"description": " moment Array "
+},
+
+"isValid_moment": {
+	"prefix":"isvalid",
+	"body": [
+		"isValid()",
+		],
+	"description": " moment Array "
+},
+
+"moment_utc": {
+	"prefix":"moment_utc",
+	"body": [
+		"moment.utc().format()",
+		],
+	"description": " get moment zone UTC "
+},
+
+"moment_plus_time_seconds": {
+	"prefix":"moment_plus_seconds",
+	"body": [
+		"let a = moment.utc().seconds(30).valueOf();",
+		"let b = moment(a).format();"
+		],
+	"description": "  moment plus time seconds  "
+},
+
+"moment_check": {
+	"prefix":"moment_check",
+	"body": [
+		"var m = moment('2011-10-10T10:20:90');",
+		"m.isValid();",
+		"m.invalidAt();"
+		],
+	"description": "  moment plus time seconds  "
+},
+
+
+"test_function": {
+	"prefix":"test_function",
+	"body": [
+		"function ${1:functionName}(){}  ${1:functionName();} ",
+
+		],
+	"description": "  moment plus time seconds  "
+},
+
+
+"Arrow Function": {
+	"prefix":"arfn",
+	"body": [
+		"const ${1:functionName} = ($2) =>{ ",
+		" $3",
+		"}"
+		],
+	"description": "  moment plus time seconds  "
+},
+
+
+
+"Arrow Method": {
+	"prefix":"arrmth",
+	"body": [
+		"${1|forEach,map,filter,reduce,some|}((${2:item}) => {",
+		" $3",
+		"})"
+		],
+	"description": "  Arrow Method  "
+},
+
+
+"Axios Request": {
+  "prefix": "axreq",
+  "body": [
+    "axios.${1|get,post,put,delete|}( '${2:url}' )",
+    "  .then(res => console.log(res.data))",
+    "  .catch(err => console.log(err));"
+  ],
+  "description": "Axios Request"
+},
+
+
+"Express": {
+  "prefix": "expsrv",
+  "body": [
+    "const express = require('express');",
+    "",
+    "const app = express();",
+    "",
+    "app.${1|get,post,put,delete|}('${2:route}',(req,res) =>{ ",
+    "  $3",
+    "})",
+    "",
+    "const PORT = process.env.PORT || ${4|3000,5000,8000,8080|};",
+    "",
+    "app.listen(PORT, () => console.log(`Server Running On Port ${PORT}`));"
+  ],
+  "description": "Express"
+}
+
+,"moment_subtract": {
+  "prefix": "moment_subtract",
+  "body": [
+    "moment().subtract(-7, 'days').format()"
+  ],
+  "description": "moment_subtract"
+},
+"moment_startOf_hand": {
+  "prefix": "moment_startof_head",
+  "body": [
+    "moment().month(0).date(1).hours(0).minutes(0).seconds(0).milliseconds(0).format()"
+  ],
+  "description": "moment_startOf_hand"
+},
+"moment_startOf": {
+  "prefix": "moment_start_of",
+  "body": [
+    "moment().startOf('day')"
+  ],
+  "description": "moment_startOf"
+},
+"moment_end_of": {
+  "prefix": "moment_end_of",
+  "body": [
+    "moment().endOf(\"day\")"
+  ],
+  "description": "moment_end_of"
+},
+"moment_local": {
+  "prefix": "moment_local",
+  "body": [
+    "var a = moment.utc([2011, 0, 1, 8]);",
+    "a.hours(); // 8 UTC",
+    "a.local();",
+    "a.hours(); "
+  ],
+  "description": "moment_local"
+},
+
+"moment_from_now": {
+  "prefix": "moment_fromnow",
+  "body": [
+    "moment([2019, 01, 1]).fromNow(true)"
+  ],
+  "description": "moment_from_now"
+},
+"moment_update_local": {
+  "prefix": "moment_update_local",
+  "body": [
+    "moment.updateLocale('en', {",
+    "    relativeTime : {",
+    "        future: \"in %s\",",
+    "        past:   \"%s ago\",",
+    "        s  : 'a few seconds',",
+    "        ss : '%d seconds',",
+    "        m:  \"a minute\",",
+    "        mm: \"%d minutes\",",
+    "        h:  \"an hour\",",
+    "        hh: \"%d hours\",",
+    "        d:  \"a day\",",
+    "        dd: \"%d days\",",
+    "        M:  \"a month\",",
+    "        MM: \"%d months \",",
+    "        y:  \"a year\",",
+    "        yy: \"%d years\"",
+    "    }",
+    "});"
+  ],
+  "description": "moment_update_local"
+},
+
+
+"moment_end_from": {
+  "prefix": "moment_end_from",
+  "body": [
+    "var start = moment([2007, 0, 5]);",
+    "var end   = moment([2007, 0, 10]);",
+    "end.from(start);       // \"in 5 days\"",
+    "end.from(start, true); // \"5 days\""
+  ],
+  "description": "moment_end_from"
+},
+"moment_to_now": {
+  "prefix": "moment_end_from",
+  "body": [
+    "moment([2019,0,1]).toNow(true)"
+  ],
+  "description": "moment_to_now"
+},
+"moment_from_string": {
+  "prefix": "moment_from_string",
+  "body": [
+    "var a = moment([2019, 0, 28]);",
+    "var b = moment([2007, 0, 29]);",
+    "console.log(a.from(b));"
+  ],
+  "description": "moment_from_string"
+},
+
+"moment_to_string": {
+  "prefix": "moment_to_string",
+  "body": [
+    "var a = moment([2007, 0, 28]);",
+    "var b = moment([2007, 0, 29]);",
+    "console.log(a.to(b)); "
+  ],
+  "description": "moment_to_string"
+},
+
+"moment_local_calender": {
+  "prefix": "moment_local_calender",
+  "body": [
+    "moment.locale('en', {",
+    " calendar : {",
+    "  lastDay : '[Yesterday at] LT',",
+    "  sameDay : '[XD] LT',",
+    "  nextDay : '[Tomorrow at] LT',",
+    "  lastWeek : '[last] dddd [at] LT',",
+    "  nextWeek : 'dddd [at] LT',",
+    "  sameElse : 'L'",
+    "      }",
+    "    });",
+    "console.log(moment().calendar());",
+    "console.log(moment().calendar(\"2013-03-07T07:00:00-08:00\"));"
+  ],
+  "description": "moment_local_calender"
+},
+
+"moment_calender": {
+  "prefix": "moment_calender",
+  "body": [
+    "moment().calendar(moment([2007, 0, 5]), {",
+    " sameDay: '[Today xd]',",
+    " nextDay: '[Tomorrow]',",
+    " nextWeek: 'dddd',",
+    " lastDay: '[Yesterday]',",
+    " lastWeek: '[Last] dddd',",
+    " sameElse: 'DD/MM/YYYY [MMMYYYUUIII]'",
+    "})"
+  ],
+  "description": "moment_calender"
+},
+
+"moment_diff": {
+  "prefix": "moment_diff",
+  "body": [
+    "var a = moment([2007, 0, 29]);",
+    "var b = moment([2007, 0, 28]);",
+    "console.log(a.diff(b,'${1|days,month,year,hours,minutes,seconds|}'));",
+  ],
+  "description": "moment_diff"
+},
+"moment_day_in_month": {
+  "prefix": "moment_day_in_month",
+  "body": [
+    "moment(\"2012-02\",\"YYYY-MM\").daysInMonth()"
+  ],
+  "description": "moment_day_in_month"
+},
+"moment_inspect": {
+  "prefix": "moment_inspect",
+  "body": [
+    "moment().inspect()"
+  ],
+  "description": "moment_inspect"
+},
+
+"lodash_concat": {
+  "prefix": "lodash_concat",
+  "body": [
+    "var array = [1,2,3,4];",
+    "var other = _.concat(array, 2, [3], [[4]]);",
+    "console.log(other);"
+  ],
+  "description": "lodash_concat"
+},
+
+
+
+////////////////////LoDash///////////////////////  	
+"lodash_chunk": {
+  "prefix": "lodash_chunk",
+  "body": [
+    "_.chunk(['a', 'b', 'c', 'd'], 2)"
+  ],
+  "description": "lodash_chunk"
+},
+
+
+"lodash_difference": {
+  "prefix": "lodash_difference",
+  "body": [
+    "_.difference([2,7,6], [2,3,6])"
+  ],
+  "description": "หา array ที่ต่างกัน  โดยเอสตัวแรกเป็น value"
+},
+
+"lodash_differentBy": {
+  "prefix": "lodash_differentBy",
+  "body": [
+    "_.differenceBy([ 1.2 , 2.1 , 3.5 , 4.6 ], [2.3, 3.4],Math.floor)"
+  ],
+  "description": "lodash_differentBy"
+},
+
+"lodash_differentwith": {
+  "prefix": "lodash_differentwith",
+  "body": [
+    "var objects = [{ 'x': 1, 'y': 2 }, { 'x': 231, 'y': 220 },{ 'x':1,'y':2 }];",
+    "_.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual)"
+  ],
+  "description": " เปรียบเทียบกำหนดเงื่อนไข เอง จาก parameter ที่ 3  "
+},
+
+"lodash_drop": {
+  "prefix": "lodash_drop",
+  "body": [
+    "_.drop([1, 2, 3], 2$1)"
+  ],
+  "description": " index เริ่มที่ 1 นับจาก ซ้าย "
+},
+
+"lodash_dropright": {
+  "prefix": "lodash_dropright",
+  "body": [
+    "_.dropRight([1, 2, 3], 2)"
+  ],
+  "description": " index เริ่มที่1 นับจากขาว"
+},
+
+"Math.droprightwhile": {
+  "prefix": "Math.droprightwhile",
+  "body": [
+    "var users = [",
+    "  { 'user': 'barney',  'active': true },",
+    "  { 'user': 'fred',    'active': true },",
+    "  { 'user': 'x1', 'active': false },",
+    "  { 'user': 'x2', 'active': true },",
+    "  { 'user': 'x3', 'active': true },",
+    "]; ",
+    "console.log(_.dropRightWhile(users, function(o) { ",
+    "    console.log(o.user);",
+    "    return o.active;",
+    " }));"
+  ],
+  "description": " checkจาก ขวามาซ้าย ถ้า false เมื่อไร เอาค่าจากซ้าย มาแสดง ถึงด้านขาวที่ check ค่าเป็น false "
+},
+"lodash_fill": {
+  "prefix": "lodash_fill",
+  "body": [
+    "_.fill([array], 'value',start,end)"
+  ],
+  "description": "lodash_fill"
+},
+
+"lodash_findindex": {
+  "prefix": "lodash_findindex",
+  "body": [
+    "var users = [",
+    "  { 'user': 'barney',  'active': false },",
+    "  { 'user': 'fred',    'active': false },",
+    "  { 'user': 'pebbles', 'active': true }",
+    "];",
+    "_.findIndex(users, function(o) { return o.user == 'barney'; });"
+  ],
+  "description": "เมื่อ function return เป็น treu จะ return index ตำแหน่งนั้น"
+},
+"lodash_shuffle": {
+  "prefix": "lodash_shuffle",
+  "body": [
+    "_.shuffle([1, 2, 3, 4])"
+  ],
+  "description": "lodash_shuffle"
+},
+
+"module_export": {
+  "prefix": "module.exports",
+  "body": [
+		"module.exports = {",
+		"\t$1",
+		"}"
+  ],
+  "description": "lodash_shuffle"
+},
+
+"propsvue": {
+  "prefix": "propsvue",
+  "body": [
+		"name_props$1: {",
+		"\ttype: String",
+		"\tdefault: 'value'",
+		"}",
+  ],
+  "description": "lodash_shuffle"
+},
+
+"eventbus": {
+  "prefix": "eventbus",
+  "body": [
+    "EventBus.$on('namebus', (payload) => {",
+    "        console.log(payload);",
+    "})"
+  ],
+  "description": "eventbus"
+},
+
+
+"mapstate": {
+	"prefix": "mapstate",
+	"body": [
+	 "...mapState([])"
+	],
+	"description": "mapstate"
+  },
+
+"mapgetter": {
+	"prefix": "mapgetter",
+	"body": [
+	 "...mapGetter([])"
+	],
+	"description": "mapgetter"
+  },
+
+  "mapmutations": {
+	"prefix": "mapmutation",
+	"body": [
+	 "...mapMutations([])"
+	],
+	"description": "mapmutation"
+  },
+
+
+  "mapaction": {
+	"prefix": "mapaction",
+	"body": [
+	 "...mapActions([])"
+	],
+	"description": "mapaction"
+  },
+
+  "import_vuex": {
+	"prefix": "import_vuex",
+	"body": [
+	 "import { mapState,mapGetter,mapMutations,mapActions } from 'vuex';"
+	],
+	"description": "mapaction"
+  },
+  "ob_to_array": {
+	"prefix": "ob_to_array",
+	"body": [
+	  "const obj = {one: 1, two: 2, three: 3};",
+	  "console.log(Object.entries(obj));"
+	],
+	"description": "ob_to_array"
+  },
+  "array_to_ob": {
+	"prefix": "array_to_ob",
+	"body": [
+	  "const myArray = [['one', 1], ['two', 2], ['three', 3]];",
+	  "const obj = Object.fromEntries(myArray);",
+	  "console.log(obj);"
+	],
+	"description": "array_to_ob"
+  },
+  "xml_ajax": {
+	"prefix": "xml_ajax",
+	"body": [
+	  "const xhr = new XMLHttpRequest();",
+	  "xhr.open('GET','https://reqres.in/api/users');",
+	  "xhr.responseType = 'json'",
+	  "xhr.onload = () =>{",
+	  "    const data = xhr.response;",
+	  "    console.log(data.data);",
+	  "}",
+	  "xhr.send();"
+	],
+	"description": "xml_ajax"
+  },
+  "xml_http_request": {
+	"prefix": "xml_http_request",
+	"body": [
+	  "const xhr = new XMLHttpRequest();"
+	],
+	"description": "xml_http_request"
+  },
+  "xml_http_open": {
+	"prefix": "xml_http_open",
+	"body": [
+	  "xhr.open('${1:GET}','${2:https://reqres.in/api/users}');"
+	],
+	"description": "xml_http_open"
+  },
+  "xml_http_json": {
+	"prefix": "xml_http_json",
+	"body": [
+	  "xhr.responseType = 'json'"
+	],
+	"description": "xml_http_json"
+  },
+  "xml_http_load": {
+	"prefix": "xml_http_load",
+	"body": [
+	  "xhr.onload = () =>{",
+	  "    $1",
+	  "}"
+	],
+	"description": "xml_http_load"
+  },
+  "xml_http_response": {
+	"prefix": "xml_http_response",
+	"body": [
+	  "xhr.response;"
+	],
+	"description": "xml_http_response"
+  },
+  "xml_http_send": {
+	"prefix": "xml_http_send",
+	"body": [
+	  "xhr.send();"
+	],
+	"description": "xml_http_send"
+  },
+  
+  "data_url_json": {
+	"prefix": "data_url_json",
+	"body": [
+	  "https://reqres.in/api/users"
+	],
+	"description": "data_url_json"
+  },
+  "variable_condition": {
+	"prefix": "variable_condition",
+	"body": [
+	  "${1:var} ${2:variable} =  ${3:condition} ? ${4:true}:${5:false}"
+	],
+	"description": "variable_condition"
+  },
+  "xml_http_send_json": {
+	"prefix": "xml_http_send_json",
+	"body": [
+	  "xhr.send(JSON.stringify(${1:data}))"
+	],
+	"description": "xml_http_send_json"
+  },
+  "ready_jquery": {
+	"prefix": "ready_jquery",
+	"body": [
+	  "$(function() {",
+	  "    $1",
+	  "});"
+	],
+	"description": "ready_jquery"
+  },
+  "fetch_javascript": {
+	"prefix": "fetch_javascript",
+	"body": [
+	  "fetch(${1:'URL'},{",
+	  "  method:'${2:POST}',",
+	  "  body:formData",
+	  "})",
+	  ".then(function(response) {",
+	  "  return response.text();",
+	  "})",
+	  ".catch(function(error){",
+	  "  console.log('Fail', error);",
+	  "});"
+	],
+	"description": "fetch_javascript"
+  },
+  "Date_javascript": {
+  "prefix": "Date_javascript",
+  "body": [
+    "function showDate() {",
+    "  var d = new Date();",
+    "  var curr_date = d.getDate();",
+    "  var curr_month = d.getMonth() + 1; //months are zero based",
+    "  var curr_year = d.getFullYear();",
+    "  document.write(curr_date + \"-\" + curr_month + \"-\" + curr_year);",
+    "}"
+  ],
+  "description": "Date_javascript"
+},
+"image_load_javascript": {
+  "prefix": "image_load_javascript",
+  "body": [
+    "var images = new Array();",
+    "function preloadImages(){",
+    "    for (i=0; i < preloadImages.arguments.length; i++){",
+    "         images[i] = new Image();",
+    "        images[i].src = preloadImages.arguments[i];",
+    "    }",
+    "}",
+    "preloadImages(\"logo.jpg\", \"main_bg.jpg\", \"body_bg.jpg\", \"header_bg.jpg\");"
+  ],
+  "description": "image_load_javascript"
+},
+"noright_click_javascript": {
+  "prefix": "noright_click_javascript",
+  "body": [
+    "function f1() {",
+    "  if(document.all) { return false; }",
+    "}",
+    "function f2(e) {",
+    "  if(document.layers || (document.getElementById &! document.all)) {",
+    "    if(e.which==2 || e.which==3) { return false; }",
+    "  }",
+    "}",
+    "if(document.layers) {",
+    "  document.captureEvents(Event.MOUSEDOWN);",
+    "  document.onmousedown = f1;",
+    "}",
+    "else {",
+    "  document.onmouseup = f2;",
+    "  document.oncontextmenu = f1;",
+    "}",
+    "document.oncontextmenu = new function(\"return false\");"
+  ],
+  "description": "noright_click_javascript"
+},
+"random_string_javascript": {
+  "prefix": "random_string_javascript",
+  "body": [
+    "writeRandomQuote = function () {",
+    "  var quotes = new Array();",
+    "  quotes[0] = \"Action is the real measure of intelligence.\";",
+    "  quotes[1] = \"Baseball has the great advantage over cricket of being sooner ended.\";",
+    "  quotes[2] = \"Every goal, every action, every thought, every feeling one experiences, whether it be consciously or unconsciously known, is an attempt to increase one's level of peace of mind.\";",
+    "  quotes[3] = \"A good head and a good heart are always a formidable combination.\";",
+    "  var rand = Math.floor(Math.random()*quotes.length);",
+    "  document.write(quotes[rand]);",
+    "}"
+  ],
+  "description": "random_string_javascript"
+},
+"string_element": {
+	"prefix": "string_element",
+	"body": [
+	  ".outerHTML"
+	],
+	"description": "string_element"
+},
+"create_node_javascript": {
+	"prefix": "create_node_javascript",
+	"body": [
+	  "var node = document.createElement(\"LI\");",
+	  "var textnode = document.createTextNode(\"Water\");",
+	  "node.appendChild(textnode);",
+	  "document.getElementById(\"myList\").appendChild(node);"
+	],
+	"description": "create_node_javascript"
+},
+"append_javascript": {
+	"prefix": "append_javascript",
+	"body": [
+	  "document.getElementById(${1:''}).appendChild(${2:node})"
+	],
+	"description": "append_javascript"
+},
+"next_element_javascript": {
+	"prefix": "next_element_javascript",
+	"body": [
+	  ".nextElementSibling"
+	],
+	"description": "next_element_javascript"
+},
+"parentElement_javascript": {
+	"prefix": "parentElement_javascript",
+	"body": [
+	  ".parentElement"
+	],
+	"description": "parentElement_javascript"
+},
+"children_javascript": {
+	"prefix": "children_javascript",
+	"body": [
+	  ".children"
+	],
+	"description": "children_javascript"
+},
+
+"date_now_javascript": {
+	"prefix": "date_now_javascript",
+	"body": [
+	  "Date.now()"
+	],
+	"description": "date_now_javascript"
+},
+"date_javascript": {
+	"prefix": "date_javascript",
+	"body": [
+	  "new Date(${1:Date.now()})"
+	],
+	"description": "date_javascript"
+},
+"date_string": {
+	"prefix": "date_string",
+	"body": [
+	  "Date.parse(${1:time})"
+	],
+	"description": "date_string"
+	},
+"route_multiple_node": {
+	"prefix": "route_multiple_node",
+	"body": [
+		"app.route('/myPath')",
+		" .get(function (req, res, next) {})",
+		" .post(function (req, res, next) {})",
+		" .put(function (req, res, next) {})"
+	],
+	"description": "route_multiple_node"
+},
+"route_before_function_node": {
+	"prefix": "route_before_function_node",
+	"body": [
+	  "app.get(${1:'/myPath'},${2:myFunction}, function (req, res, next) {",
+	  "  $3",
+	  "})"
+	],
+	"description": "route_before_function_node"
+},
+"route_create_node": {
+	"prefix": "route_create_node",
+	"body": [
+	  "const express = require('express');",
+	  "const router = express.Router();",
+	  "",
+	  "router.get('/greet', (req, res, next) => {",
+	  "    res.end(\"greet\");",
+	  "});"
+	],
+	"description": "route_create_node"
+},
+"express_router_node": {
+	"prefix": "express_router_node",
+	"body": [
+	  "express.Router()"
+	],
+	"description": "express_router_node"
+},
+"url_node": {
+	"prefix": "url_node",
+	"body": [
+	  "req.originalUrl "
+	],
+	"description": "url_node"
+},
+"url_params_node": {
+	"prefix": "url_params_node",
+	"body": [
+	  "req.params.user_id"
+	],
+	"description": "url_params_node"
+},
+"url_string_node": {
+	"prefix": "url_string_node",
+	"body": [
+	  "req.query.field "
+	],
+	"description": "url_string_node"
+},
+"cookie_set_node": {
+	"prefix": "cookie_set_node",
+	"body": [
+	  "res.cookie('username', 'john doe', { maxAge: 900000, httpOnly: true });"
+	],
+	"description": "cookie_node"
+},
+"cookie_get_node": {
+	"prefix": "cookie_get_node",
+	"body": [
+	  "req.cookies['username']"
+	],
+	"description": "cookie_get_node"
+},
+"url_get_node": {
+	"prefix": "url_get_node",
+	"body": [
+	  "req.url"
+	],
+	"description": "url_get_node"
+},
+"lower_case_javascript": {
+	"prefix": "lower_case_javascript",
+	"body": [
+	  "toLowerCase()"
+	],
+	"description": "lower_case_javascript"
+},
+"set_status_http_node": {
+	"prefix": "set_status_http_node",
+	"body": [
+	  "res.status(500)"
+	],
+	"description": "set_status_http_node"
+},
+"ejs_set_node": {
+	"prefix": "ejs_set_node",
+	"body": [
+	  "app.set('view engine','${1:ejs}')"
+	],
+	"description": "ejs_set_node"
+},	
+"ajax_start": {
+	"prefix": "ajax_start",
+	"body": [
+	  "$.ajax({",
+	  "    url: ${1:''},",
+	  "    type: ${2:'GET'},",
+	  "    data: {",
+	  "        format: 'json'",
+	  "    },",
+	  "    success: function(data) {",
+	  "        $3",
+	  "    },",
+	  "    error: function() {",
+	  "       console.log(\"Error\");",
+	  "    },",
+	  "    dataType: 'jsonp',",
+	  "})"
+	],
+	"description": "ajax_start"
+  },
+"req_body_node": {
+"prefix": "req_body_node",
+"body": [
+	"req.body"
+],
+"description": "req_body_node"
+},
+"url_parser": {
+	"prefix": "url_parser",
+	"body": [
+	  "urlencodedParser"
+	],
+	"description": "url_parser"
+},
+"set_public_node": {
+	"prefix": "set_public_node",
+	"body": [
+	  "app.use(express.static('./public'))"
+	],
+	"description": "set_public_node"
+},
+"require_node": {
+	"prefix": "require_node",
+	"body": [
+	  "require('')"
+	],
+	"description": "require_node"
+},
+"url_encode_node": {
+	"prefix": "url_encode_node",
+	"body": [
+	  "body_parser.urlencoded({extended:false})"
+	],
+	"description": "url_encode_node"
+},
+"body_parser_node": {
+	"prefix": "body_parser_node",
+	"body": [
+	  "var body_parser = require('body-parser');",
+	  "var urlencodedParser = body_parser.urlencoded({extended:false});"
+	],
+	"description": "body_parser_node"
+},
+"post_route_encode_node": {
+	"prefix": "post_route_encode_node",
+	"body": [
+	  "app.post('/url',urlencodedParser,function(req,res,next){",
+	  "  ${1:// code}",
+	  "});"
+	],
+	"description": "post_route_encode_node"
+},
+"ajax_https_node": {
+	"prefix": "ajax_https_node",
+	"body": [
+	  "const url = ${1:\"https://jsonplaceholder.typicode.com/posts\";}",
+	  "  https.${2:get}(url, res => {",
+	  "    res.setEncoding(\"utf8\");",
+	  "    let body = \"\";",
+	  "    res.on(\"data\", data => {body += data;});",
+	  "    res.on(\"end\", () => {",
+	  "      body = JSON.parse(body);",
+	  "      ${3://Code}",
+	  "    });",
+	  "  });"
+	],
+	"description": "ajax_https_node",
+},
+"set_data_javascript": {
+	"prefix": "set_data_javascript",
+	"body": [
+	  "new Set([$1]);"
+	],
+	"description": "set_data_javascript"
+  },
+"merge_array_javascript": {
+	"prefix": "merge_array_javascript",
+	"body": [
+	  "${1:Array}.concat(${2:fruits2})"
+	],
+	"description": "merge_array_javascript"
+},
+"is_null_php": {
+	"prefix": "is_null_php",
+	"body": [
+	  "is_null(${1:$variable})"
+	],
+	"description": "is_null_php"
+  },
+  
+"import-react": {
+	"prefix": "import-react",
+	"body": [
+	  "import React from 'react'"
+	],
+	"description": "import-react"
+  },
+  "props-state-react": {
+	"prefix": "props-state-react",
+	"body": [
+	  "{...this.state}"
+	],
+	"description": "props-state-react"
+  },
+  "template_component_react": {
+	"prefix": "template_component_react",
+	"body": [
+	  "class ${1:App} extends Component {",
+	  "  state = {};",
+	  "  render() {",
+	  "    return (",
+	  "      <div></div>",
+	  "    );",
+	  "  }",
+	  "}"
+	],
+	"description": "template_component_react"
+  },
+  "set_state_react": {
+	"prefix": "set_state_react",
+	"body": [
+	  " this.setState({${1:variable}:${2:value}});"
+	],
+	"description": "set_state_react"
+  },
+  "set_state_callback_react": {
+	"prefix": "set_state_callback_react",
+	"body": [
+	  " this.setState({${1:variable}:${2:value}}, ()=>{$3} );"
+	],
+	"description": "set_state_callback_react"
+  },
+  "state_less_react": {
+	"prefix": "state_less_react",
+	"body": [
+	  "const ${1:Contacts} = ({ ${1:contacts} }) => (",
+	  "  <div></div>",
+	  ");"
+	],
+	"description": "state_less_react"
+  },
+  "hook_mounted_react": {
+	"prefix": "hook_mounted_react",
+	"body": [
+	  " componentDidMount(){",
+	  "    ${1://#Code}",
+	  " }"
+	],
+	"description": "hook_mounted_react"
+  },
+  "import_react": {
+	"prefix": "import_react",
+	"body": [
+	  "import React,{Component} from 'react';"
+	],
+	"description": "import_react"
+  },
+  "arrow_function_javascript": {
+	"prefix": "arrow_function_javascript",
+	"body": [
+	  "(${1:event})=>{",
+	  "     return;",
+	  "}"
+	],
+	"description": "arrow_function_javascript"
+  },
+  "keycode_enter_javascript": {
+	"prefix": "keycode_enter_javascript",
+	"body": [
+	  "(e.keyCode===13)"
+	],
+	"description": "keycode_enter_javascript"
+  },
+  "set_state_all_react": {
+	"prefix": "set_state_all_react",
+	"body": [
+	  "...this.state"
+	],
+	"description": "set_state_all_react"
+  },
+  "onchange_react": {
+	"prefix": "onchange_react",
+	"body": [
+	  "onChange={${1:()=>{}}}"
+	],
+	"description": "onchange_react"
+  },
+  "value_input_react": {
+	"prefix": "value_input_react",
+	"body": [
+	  " value = ${1:{this.state.value} }"
+	],
+	"description": "value_input_react"
+  },
+  "render_react": {
+	"prefix": "render_react",
+	"body": [
+	  "  render(){",
+	  "    return (",
+	  "      <div></div>",
+	  "    )",
+	  "  }"
+	],
+	"description": "render_react"
+  },
+  "class_attribut_react": {
+	"prefix": "class_attribut_react",
+	"body": [
+	  "className = \"\""
+	],
+	"description": "class_attribut_react"
+  },
+  "export_global_component_react": {
+	"prefix": "export_global_component_react",
+	"body": [
+	  "export  {default as ${1:Name-revolk} } from ${2:'./file'}"
+	],
+	"description": "export_global_component_react"
+  },
+  "import_component_global_react": {
+	"prefix": "import_component_global_react",
+	"body": [
+	  "import { ${1:NameComponent_golbal} } from '${2:./directory}';"
+	],
+	"description": "import_component_global_react"
+  },
+  "ref_react": {
+	"prefix": "ref_react",
+	"body": [
+	  "ref = { (${1:parameter}) => ${2:{}}"
+	],
+	"description": "ref_react"
+  },
+  "proptypes_react": {
+	"prefix": "proptypes_react",
+	"body": [
+	  "import PropTypes from \"prop-types\";"
+	],
+	"description": "proptypes_react"
+  },
+  "props_default_contacts_react": {
+	"prefix": "props_default_contacts_react",
+	"body": [
+	  "${1:value_state_less}.defaultProps = {",
+	  "  ${2:value_default}: []",
+	  "};"
+	],
+	"description": "props_default_contacts_react"
+  },
+  "component_props_react": {
+	"prefix": "component_props_react",
+	"body": [
+	  "<${1:Components} ${2:variable_props}={${3:this.state.variable}} />"
+	],
+	"description": "component_props_react"
+  },
+  "import_component_react": {
+	"prefix": "import_component_react",
+	"body": [
+	  "import ${1:NameComponent} from \"${2:directory component}\""
+	],
+	"description": "import_component_react"
+  },
+  "import_react_dom": {
+	"prefix": "import_react_dom",
+	"body": [
+	  "import ReactDOM from 'react-dom';"
+	],
+	"description": "import_react_dom"
+  },
+  "variable_define_react": {
+	"prefix": "variable_define_react",
+	"body": [
+	  "${1:const} {${2:name,surname}} = ${3:this.state};"
+	],
+	"description": "variable_define_react"
+  },
+  "constructor_javascript": {
+	"prefix": "constructor_javascript",
+	"body": [
+	  "  constructor() {",
+	  "     ${1:super()}",
+	  "  }"
+	],
+	"description": "constructor_javascript"
+  },
+  "variable_object_javascript": {
+	"prefix": "variable_object_javascript",
+	"body": [
+	  " ${1:var} ${2:object} = [{$3}];"
+	],
+	"description": "variable_object_javascript"
+  },
+  "map_array_javascript": {
+	"prefix": "map_array_javascript",
+	"body": [
+	  "${1:array}.map((${2:content},${3:index})=>{})"
+	],
+	"description": "map_array_javascript"
+  },
+  "array_map_javascript": {
+	"prefix": "array_map_javascript",
+	"body": [
+	  "${1:array}.map((${2:content},${3:index})=>{})"
+	],
+	"description": "array_map_javascript"
+  },
+  "default_props_react": {
+	"prefix": "default_props_react",
+	"body": [
+	  "${1:variable_state_less}.defaultProps = {",
+	  "    ${1:variable}:${2:value}",
+	  "}"
+	],
+	"description": "default_props_react"
+  },
+  "import_bootstrap_node": {
+	"prefix": "import_bootstrap_node",
+	"body": [
+	  "import \"bootstrap/dist/css/bootstrap.min.css\";"
+	],
+	"description": "import_bootstrap_node"
+  },
+  "props_children_react": {
+	"prefix": "props_children_react",
+	"body": [
+	  "this.props.children"
+	],
+	"description": "props_children_react"
+  }
+
+
+
+

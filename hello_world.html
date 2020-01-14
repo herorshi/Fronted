@@ -10,20 +10,42 @@
     <textarea name="" id="" cols="100"- rows="20">
         <button id ="OK">Testarea</button><br/>
         <button id ="OK2">Test2</button> <br>
-        <span>OK</span>
+        <button id="al">alert</button> <br>
+        <button id="btn1">0</button>
+        <button id="btn2">100</button>
         <script>
-            document.getElementById('OK').addEventListener('click',e =>{
-                console.log("AREA");
-            });
-            document.getElementById('OK2').addEventListener('click',e =>{
-                console.log("Work");
-            });
-        </script>
+            //parseInt 
+           document.getElementById('OK').addEventListener('click',e =>{
+              console.log("AREA");
+           });
+        
+           document.getElementById('OK2').addEventListener('click',e =>{
+              console.log("Work");
+           });
+        
+          document.getElementById('al').addEventListener('click',e =>{
+              alert("TEST");
+           });
+          document.getElementById('btn1').addEventListener('click',e =>{
+              e.target.innerText =  parseInt(e.target.innerText) +1;
+          });
+          document.getElementById('btn2').addEventListener('click',e =>{
+              e.target.innerText = parseInt(e.target.innerText) -1;
+          });
+        </script> 
     </textarea>
     <button id="ok">OK</button>
     <div class="" id="detail">Detail</div>
     <div id="save"></div>
     <script>
+        document.getElementById('myH1').style.color = 'red';
+        document.getElementsByClassName('');
+        document.getElementsByName('');
+        document.getElementById('')
+        document.getElementById('')
+        document.getElementsByName('');
+        document.getElementsByClassName('');
+        document.getElementById('myH1').style.color = 'red';
         var x = document.getElementsByTagName('textarea')[0];
         var v2 = document.getElementById('ok');
         x.addEventListener('keyup',e =>{
@@ -42,12 +64,10 @@
             document.getElementById('save').innerHTML = x.value;
                 for (let x = 0; x < document.getElementById('save').children.length; x++) {
                     const element = document.getElementById('save').children[x].tagName;
-                    const element2 =  document.getElementById('save').children[x].innerText;
-                        if(element == "SCRIPT"){
-                                eval(element2);
-                        }
+                    const element2 = document.getElementById('save').children[x].innerText;
+                    if(element == "SCRIPT") eval(element2);
                 }
-        });     
+        });      
     </script>
 </body>
 </html>
